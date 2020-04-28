@@ -1,0 +1,649 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="「系统」窗口管理-Hammerspoon, best value SideProject IndieMaker electronic hardware mac efficient Kits good things sharing">
+    <meta name="description" content="在日常办公环境，有时候在处理一些事务性问题时，需要在浏览器网页、写作工具或者其他应用之间，频繁切换来完成某一项工作。当系统打开的应用比较多的时候，你会发现来回切换的操作总有好么一些不舒服。
+至于，如何来解决这个问题呢？ 对，那就是将多个窗口">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="monetization" content="$coil.xrptipbot.com/DHaG5sfGQDq0KNSTqynxeQ">
+    <meta name="og:image" content="http://cdn.hackdapp.com/030142.png">
+    <meta name="twitter:image:src" content="http://cdn.hackdapp.com/030142.png">
+    <title>「系统」窗口管理-Hammerspoon | 极客豚</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+    <style type="text/css">
+        
+    </style>
+
+    <script src="/libs/jquery/jquery-2.2.0.min.js"></script>
+    <script>(function(i,s,o,g,r,a,m){i["DaoVoiceObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset="utf-8";m.parentNode.insertBefore(a,m)})(window,document,"script",('https:' == document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/324f5ec0.js","daovoice")</script>
+
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+
+
+<body>
+
+<header class="navbar-fixed">
+    <nav id="headNav" class="bg-color">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">极客豚</span>
+                </a>
+
+
+            </div>
+
+
+
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fa fa-navicon"></i></a>
+<ul class="right">
+    
+    <li class="hide-on-med-and-down">
+        <a href="/" class="waves-effect waves-light">
+            
+            <i class="fa fa-home"></i>
+            
+            <span>Index</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/challege" class="waves-effect waves-light">
+            
+            <i class="fa fa-bookmark"></i>
+            
+            <span>Challege</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/about" class="waves-effect waves-light">
+            
+            <i class="fa fa-user-circle-o"></i>
+            
+            <span>About</span>
+        </a>
+    </li>
+    
+    <!-- <li>
+        <a href="#" class="modal-trigger waves-effect waves-light">
+          <img src="http://cdn.hackdapp.com/qrcode_for_gh_16affcd16f4a_430.jpg" class="mp-chat" alt="LOGO">
+        </a>
+    </li> -->
+    <li>
+        <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+            <i id="searchIcon" class="fa fa-search" title="Search"></i>
+        </a>
+    </li>
+</ul>
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">极客豚</div>
+        <div class="logo-desc">
+            
+            Focus on the best value information, including SideProject, IndieMaker, diy hardware, mac efficient kits and good things.
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li>
+            <a href="/" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-home"></i>
+                
+                Index
+            </a>
+        </li>
+        
+        <li>
+            <a href="/challege" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-bookmark"></i>
+                
+                Challege
+            </a>
+        </li>
+        
+        <li>
+            <a href="/about" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-user-circle-o"></i>
+                
+                About
+            </a>
+        </li>
+        
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+    </nav>
+
+</header>
+<!-- <div style="border:1px red solid; width: 1780px; margin: 5px auto">微信公众号: hackdapp</div> -->
+
+
+
+
+
+<div class="bg-cover pd-header" style="background-image: url('http://cdn.hackdapp.com/030142.png')">
+    <div class="container">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <div class="description center-align post-title">
+                        「系统」窗口管理-Hammerspoon
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="container content">
+
+    
+    <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/日增一技/" target="_blank">
+                                <span class="chip bg-color">日增一技</span>
+                            </a>
+                        
+                            <a href="/tags/Mac技巧/" target="_blank">
+                                <span class="chip bg-color">Mac技巧</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                <div class="post-date info-break-policy">
+                    <i class="fa fa-calendar-minus-o fa-fw"></i>Publish Date:&nbsp;&nbsp;
+                    2019-06-11
+                </div>
+
+                
+				
+				
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="fa fa-eye fa-fw"></i>Read Count:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+        </div>
+        <hr class="clearfix">
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <p>在日常办公环境，有时候在处理一些事务性问题时，需要在浏览器网页、写作工具或者其他应用之间，频繁切换来完成某一项工作。当系统打开的应用比较多的时候，你会发现来回切换的操作总有好么一些不舒服。</p>
+<p>至于，如何来解决这个问题呢？ 对，那就是将多个窗口放在同一屏幕中。</p>
+<p>但有人可能发现，当平铺的窗口稍多一些时，可能在调整窗口大小的操作上还是会浪费一些时间。那么，是否有一些更好方法，可以快速对窗口进行界面布局中呢？</p>
+<p>有，而且还不少。比如: Magnet、Moon、Sizeup、Cinch、Hammerspoon、LayAuto等</p>
+<p>但是，今天我要推荐的是：<strong>Hammerspoon</strong>。 为什么要推荐这款软件而不是其他的呢？因为优势在于其强悍的个性化插件定制，而窗口管理功能只是其中的一个插件而已。</p>
+<p><img src="http://cdn.hackdapp.com/030142.png" alt></p>
+<h4 id="功能特色"><a href="#功能特色" class="headerlink" title="功能特色"></a>功能特色</h4><ul>
+<li>丰富的插件资源</li>
+<li>可编程插件</li>
+<li>灵活定义快捷键</li>
+<li>详尽的接口文档</li>
+</ul>
+<h4 id="效果展示"><a href="#效果展示" class="headerlink" title="效果展示"></a>效果展示</h4><p><img src="http://cdn.hackdapp.com/2018-07-20-050954.jpg" alt></p>
+<h4 id="软件配置"><a href="#软件配置" class="headerlink" title="软件配置"></a>软件配置</h4><h5 id="1-安装本体"><a href="#1-安装本体" class="headerlink" title="1. 安装本体"></a>1. 安装本体</h5><p>1） 下载[<a href="http://t.cn/RgWjXtX]并解压" target="_blank" rel="noopener">http://t.cn/RgWjXtX]并解压</a></p>
+<p>2） 拖动 <code>Hammerspoon.app</code> 至 <code>/Applications</code></p>
+<p>3） 打开 “系统偏好设 - “安全性与隐私” - “辅助” 找到 “Hammerspoon.app”, 将其勾选。</p>
+<h5 id="2-克隆并自定义配置"><a href="#2-克隆并自定义配置" class="headerlink" title="2. 克隆并自定义配置"></a>2. 克隆并自定义配置</h5><pre class=" language-shell"><code class="language-shell">    > git clone https://github.com/ashfinal/awesome-hammerspoon.git ~/.hammerspoon~
+</code></pre>
+<h4 id="软件快捷键"><a href="#软件快捷键" class="headerlink" title="软件快捷键"></a>软件快捷键</h4><table>
+<thead>
+<tr>
+<th style="text-align:left">命令</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">⌘ + R</td>
+<td style="text-align:left">激活窗口场景</td>
+</tr>
+<tr>
+<td style="text-align:left">ESC 或 Q</td>
+<td style="text-align:left">退出窗口管理</td>
+</tr>
+<tr>
+<td style="text-align:left">A 或 ⇧+H</td>
+<td style="text-align:left">右左移动</td>
+</tr>
+<tr>
+<td style="text-align:left">D 或 ⇧+L</td>
+<td style="text-align:left">右右移动</td>
+</tr>
+<tr>
+<td style="text-align:left">W 或 ⇧+K</td>
+<td style="text-align:left">向上移动</td>
+</tr>
+<tr>
+<td style="text-align:left">S 或 ⇧+J</td>
+<td style="text-align:left">向下移动</td>
+</tr>
+<tr>
+<td style="text-align:left">H</td>
+<td style="text-align:left">左半屏</td>
+</tr>
+<tr>
+<td style="text-align:left">L</td>
+<td style="text-align:left">右半屏</td>
+</tr>
+<tr>
+<td style="text-align:left">K</td>
+<td style="text-align:left">上半屏</td>
+</tr>
+<tr>
+<td style="text-align:left">J</td>
+<td style="text-align:left">下半屏</td>
+</tr>
+<tr>
+<td style="text-align:left">Y</td>
+<td style="text-align:left">左上屏</td>
+</tr>
+<tr>
+<td style="text-align:left">O</td>
+<td style="text-align:left">右上屏</td>
+</tr>
+<tr>
+<td style="text-align:left">U</td>
+<td style="text-align:left">左下屏</td>
+</tr>
+<tr>
+<td style="text-align:left">I</td>
+<td style="text-align:left">右下屏</td>
+</tr>
+<tr>
+<td style="text-align:left">F</td>
+<td style="text-align:left">全屏</td>
+</tr>
+<tr>
+<td style="text-align:left">C</td>
+<td style="text-align:left">居中</td>
+</tr>
+<tr>
+<td style="text-align:left">=</td>
+<td style="text-align:left">放大</td>
+</tr>
+<tr>
+<td style="text-align:left">-</td>
+<td style="text-align:left">缩小</td>
+</tr>
+<tr>
+<td style="text-align:left">left</td>
+<td style="text-align:left">左侧扩展屏</td>
+</tr>
+<tr>
+<td style="text-align:left">right</td>
+<td style="text-align:left">右侧扩展屏</td>
+</tr>
+<tr>
+<td style="text-align:left">up</td>
+<td style="text-align:left">上侧扩展屏</td>
+</tr>
+<tr>
+<td style="text-align:left">down</td>
+<td style="text-align:left">下侧扩展屏</td>
+</tr>
+<tr>
+<td style="text-align:left">space</td>
+<td style="text-align:left">下一个扩展屏</td>
+</tr>
+<tr>
+<td style="text-align:left">[</td>
+<td style="text-align:left">撤销上一步操作</td>
+</tr>
+<tr>
+<td style="text-align:left">]</td>
+<td style="text-align:left">重做</td>
+</tr>
+<tr>
+<td style="text-align:left">`</td>
+<td style="text-align:left">光标居中</td>
+</tr>
+</tbody>
+</table>
+<p><code>注</code>: 软件本身可扩展性比较强，只要你有想法基本就可以通过编程实现，但前提是你可能需要学习一下lua语言。</p>
+<center> — The End — </center>
+
+<hr>
+<pre><code>       _                 _
+ _ __ | |_ _   _ _ __   (_) ___
+| &#39;_ \| __| | | | &#39;_ \  | |/ _ \
+| |_) | |_| |_| | | | |_| | (_) |
+| .__/ \__|\__,_|_| |_(_)_|\___/
+|_|
+</code></pre><pre><code>极客豚:   http://ptun.io
+===============================
+我的个人博客:  https://www.hackdapp.com/
+我的哔哩哔哩:  https://space.bilibili.com/17360859
+我的github:   https://github.com/hackdapp
+IndieMakers: https://www.indiemakers.cn
+我的微信公众号: hackdapp
+===============================
+联系邮箱：55269778@qq.com
+</code></pre>
+            </div>
+            <hr>
+
+            
+
+            <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+
+<div id="article-share">
+    
+    <div class="social-share" data-disabled="qzone, qq, weibo, douban"></div>
+    
+</div>
+
+<script src="/libs/share/js/social-share.min.js"></script>
+
+            
+
+
+        </div>
+    </div>
+
+    
+        <link rel="stylesheet" href="/libs/gitalk/gitalk.css">
+<link rel="stylesheet" href="/css/my-gitalk.css">
+
+<div class="card gitalk-card" data-aos="fade-up">
+    <div id="gitalk-container" class="card-content"></div>
+</div>
+
+<script src="/libs/gitalk/gitalk.min.js"></script>
+<script>
+    let gitalk = new Gitalk({
+        clientID: '580230fd6334c4654ed5',
+        clientSecret: '3f91c3b703b9a17cae5b95f9b56228c3e30e9878',
+        repo: 'ptun.io',
+        owner: 'hackdapp',
+        admin: "hackdapp",
+        id: '2019-06-11T18-22-22',
+        distractionFreeMode: false  // Facebook-like distraction free mode
+    });
+
+    gitalk.render('gitalk-container');
+</script>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6 overflow-policy" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fa fa-chevron-left"></i>&nbsp;Previous</div>
+            <div class="card">
+                <a href="/archives/write_image_zoommy.html">
+                    <div class="card-image">
+                        
+                        <img src="http://cdn.hackdapp.com/2018-06-19-144421.png" class="responsive-img" alt="写作-配图-Zoommy">
+                        
+                        <span class="card-title">写作-配图-Zoommy</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            对于经常写文章的朋友来讲，可能遇到的一个头痛的问题就是如何找到合适且免费的图片素材。
+也许，你可能会通过百度或者Google进行一些图片检索，但可能在需要在时间上花费较大的精力投力；有一些人可能自己会在本地维护一套素材库，但终归量不够大，无
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-06-12
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fa fa-user fa-fw"></i>
+                            hackhook
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/日增一技/" target="_blank">
+                        <span class="chip bg-color">日增一技</span>
+                    </a>
+                    
+                    <a href="/tags/图片管理/" target="_blank">
+                        <span class="chip bg-color">图片管理</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6 overflow-policy" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                Next&nbsp;<i class="fa fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/archives/auto_expander_text.html">
+                    <div class="card-image">
+                        
+                        <img src="http://cdn.hackdapp.com/122000.jpg" class="responsive-img" alt="TextExpander">
+                        
+                        <span class="card-title">TextExpander</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            在日常办公环境中，总会遇到一些需要重复性的工作，比如：手机号、家庭或工作地址、周报模板、当前日期或时间等等。
+有些人或许在长久的不耐烦之后，会寻求一种替代方法来解决这种问题；但大多数人可能还是一如既往的一次次一遍遍的重复着。问过身边的大多数
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-06-10
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fa fa-user fa-fw"></i>
+                            hackhook
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/日增一技/" target="_blank">
+                        <span class="chip bg-color">日增一技</span>
+                    </a>
+                    
+                    <a href="/tags/Mac技巧/" target="_blank">
+                        <span class="chip bg-color">Mac技巧</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+</div>
+
+
+
+    
+
+</main>
+
+
+<footer class="page-footer bg-color">
+    <div class="container row center-align">
+        <div class="col s12 m8 l8 copy-right">
+
+            
+
+            
+			         
+                <br>
+                
+                <span id="busuanzi_container_site_pv">
+                    <i class="fa fa-heart-o"></i>
+                    本站总访问量 <span id="busuanzi_value_site_pv" class="white-color"></span>
+                </span>
+                
+                
+                <span id="busuanzi_container_site_uv">
+                    <i class="fa fa-users"></i>
+                    次,&nbsp;访客数 <span id="busuanzi_value_site_uv" class="white-color"></span> 人.
+                </span>
+                
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/hackdapp" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fa fa-github"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fa fa-rss"></i>
+    </a>
+</div>
+    </div>
+
+</footer>
+
+<div class="progress-bar"></div>
+
+<script type="text/javascript">
+  daovoice('init', {
+    app_id: "324f5ec0"
+  });
+  daovoice('update');
+</script>
+
+
+<!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fa fa-search"></i>&nbsp;&nbsp;Search</span>
+            <input type="search" id="searchInput" name="s" placeholder="Please enter a search keyword" class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script src="/js/search.js"></script>
+<script type="text/javascript">
+$(function () {
+    searchFunc("/" + "search.xml", 'searchInput', 'searchResult');
+});
+</script>
+<!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fa fa-angle-up"></i>
+    </a>
+</div>
+
+
+<script src="/libs/materialize/materialize.min.js"></script>
+<script src="/libs/masonry/masonry.pkgd.min.js"></script>
+<script src="/libs/aos/aos.js"></script>
+<script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+<script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+<script src="/js/matery.js"></script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-132319949-2"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+    gtag('config', 'UA-132319949-2');
+</script>
+
+
+
+
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+
+
+</body>
+</html>

@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>极客豚</title>
+  
+  <subtitle>Focus on the best value information.</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://ptun.io/"/>
+  <updated>2020-04-28T00:20:41.261Z</updated>
+  <id>http://ptun.io/</id>
+  
+  <author>
+    <name>hackhook</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>WATCH YOUR LIFE TICK AWAY WITH THIS LIFETIME COUNTDOWN CLOCK</title>
+    <link href="http://ptun.io/archives/watch-your-life-tick-away-with-this-lifetime-countdown-clock.html"/>
+    <id>http://ptun.io/archives/watch-your-life-tick-away-with-this-lifetime-countdown-clock.html</id>
+    <published>2020-04-28T00:20:41.261Z</published>
+    <updated>2020-04-28T00:20:41.261Z</updated>
+    
+    <summary type="html">
+    
+      Now you can have an ongoing existential crisis, every second of your ever-dwindling life with this personal life countdown timer.
+    
+    </summary>
+    
+    
+      <category term="硬件" scheme="http://ptun.io/tags/%E7%A1%AC%E4%BB%B6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>CIRCUIT BOARD DESIGN CLASS</title>
+    <link href="http://ptun.io/archives/Circuit-Board-Design-Class.html"/>
+    <id>http://ptun.io/archives/Circuit-Board-Design-Class.html</id>
+    <published>2020-04-28T00:20:41.261Z</published>
+    <updated>2020-04-28T00:20:41.261Z</updated>
+    
+    <summary type="html">
+    
+      how to design a custom printed circuit board from a breadboard prototype.
+    
+    </summary>
+    
+    
+      <category term="Course" scheme="http://ptun.io/tags/Course/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Paper Plane Engine</title>
+    <link href="http://ptun.io/archives/Paper-Plane-Engine.html"/>
+    <id>http://ptun.io/archives/Paper-Plane-Engine.html</id>
+    <published>2019-10-25T11:49:08.000Z</published>
+    <updated>2020-04-28T00:20:41.261Z</updated>
+    
+    <summary type="html">
+    
+      纸飞机动力引擎。利用皮筋、木棍、夹子，让你的纸飞机飞出新的高度，带孩子一起参与制作吧。
+    
+    </summary>
+    
+    
+      <category term="DIY" scheme="http://ptun.io/tags/DIY/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Ultimaker Robot &quot;Pin Walker&quot;</title>
+    <link href="http://ptun.io/archives/Ultimaker-Robot-Pin-Walker.html"/>
+    <id>http://ptun.io/archives/Ultimaker-Robot-Pin-Walker.html</id>
+    <published>2019-09-27T12:08:44.000Z</published>
+    <updated>2020-04-28T00:20:41.261Z</updated>
+    
+    <summary type="html">
+    
+      知道如何做一款桌面自由摇摆的机器人吗？&quot;Pin Walker&quot;制作教程来了。
+    
+    </summary>
+    
+    
+      <category term="硬件" scheme="http://ptun.io/tags/%E7%A1%AC%E4%BB%B6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>3D魔猴打印</title>
+    <link href="http://ptun.io/archives/3d_print.html"/>
+    <id>http://ptun.io/archives/3d_print.html</id>
+    <published>2019-09-26T12:13:51.000Z</published>
+    <updated>2020-04-28T00:20:41.260Z</updated>
+    
+    <summary type="html">
+    
+      3D打印服务推荐，支持在线实时报价，只需上传你的图纸并选择材料便可显示你需要支付的金额。
+    
+    </summary>
+    
+    
+      <category term="工具" scheme="http://ptun.io/tags/%E5%B7%A5%E5%85%B7/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>DIY IV 21 Tiny VFD Clock</title>
+    <link href="http://ptun.io/archives/vfd_tube.html"/>
+    <id>http://ptun.io/archives/vfd_tube.html</id>
+    <published>2019-09-25T12:16:56.000Z</published>
+    <updated>2020-04-28T00:20:41.260Z</updated>
+    
+    <summary type="html">
+    
+      使用8位数字辉光管DIY的一款极具极客风的辉光管数显表。万能的淘宝也有在售，只不过没见过这种8位辉光管。
+    
+    </summary>
+    
+    
+      <category term="硬件" scheme="http://ptun.io/tags/%E7%A1%AC%E4%BB%B6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Raspberry Pi - Minikame</title>
+    <link href="http://ptun.io/archives/Raspberry-Pi-Minikame.html"/>
+    <id>http://ptun.io/archives/Raspberry-Pi-Minikame.html</id>
+    <published>2019-09-24T12:49:00.000Z</published>
+    <updated>2020-04-28T00:20:41.260Z</updated>
+    
+    <summary type="html">
+    
+      使用树莓派制作四脚爬行机器人，所需材料并不算多，主要有舵机、以及3打印的关节与脚以及树莓板。
+    
+    </summary>
+    
+    
+      <category term="硬件" scheme="http://ptun.io/tags/%E7%A1%AC%E4%BB%B6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Arduino Word Clock</title>
+    <link href="http://ptun.io/archives/arduino_work_clock.html"/>
+    <id>http://ptun.io/archives/arduino_work_clock.html</id>
+    <published>2019-09-23T12:39:12.000Z</published>
+    <updated>2020-04-28T00:20:41.260Z</updated>
+    
+    <summary type="html">
+    
+      一款可通过英文字母来显示当时时间的电子钟表。可使用Arduino以及树莓派来进行手工制作。
+    
+    </summary>
+    
+    
+      <category term="硬件" scheme="http://ptun.io/tags/%E7%A1%AC%E4%BB%B6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Brydge - Award Winning Bluetooth Keyboards for iPad &amp; Surface Pro</title>
+    <link href="http://ptun.io/archives/brydge.html"/>
+    <id>http://ptun.io/archives/brydge.html</id>
+    <published>2019-09-20T12:22:28.000Z</published>
+    <updated>2020-04-28T00:20:41.260Z</updated>
+    
+    <summary type="html">
+    
+      专门针对iPadPro设计的配置蓝牙键盘Case。自认为这绝对是2019年最值得购买的一个物件,不论是从颜值还是体验。
+    
+    </summary>
+    
+    
+      <category term="好物推荐" scheme="http://ptun.io/tags/%E5%A5%BD%E7%89%A9%E6%8E%A8%E8%8D%90/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Pan And Tilt To A New 3D Printed Business Model</title>
+    <link href="http://ptun.io/archives/pan-and-tilt-to-a-new-3d-printed-business-model.html"/>
+    <id>http://ptun.io/archives/pan-and-tilt-to-a-new-3d-printed-business-model.html</id>
+    <published>2019-09-19T11:41:54.000Z</published>
+    <updated>2020-04-28T00:20:41.260Z</updated>
+    
+    <summary type="html">
+    
+      ORTAK is a new co-manufacturing approach that allows anyone to own fully-functional, high-tech products at greatly reduced prices. With ORTAK method, products are manufactured by you and edelkrone together.
+    
+    </summary>
+    
+    
+      <category term="IDEA" scheme="http://ptun.io/tags/IDEA/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>evive a prototyping platform for makers</title>
+    <link href="http://ptun.io/archives/evive-a-prototyping-platform-for-makers.html"/>
+    <id>http://ptun.io/archives/evive-a-prototyping-platform-for-makers.html</id>
+    <published>2019-09-18T11:18:13.000Z</published>
+    <updated>2020-04-28T00:20:41.259Z</updated>
+    
+    <summary type="html">
+    
+      evive is an opensource prototyping platform. With Arduino MEGA at its heart, it offers a novel way of interacting with your hardware using it&#39;s menu based visual interface.
+    
+    </summary>
+    
+    
+      <category term="硬件" scheme="http://ptun.io/tags/%E7%A1%AC%E4%BB%B6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>The Electronic Dice</title>
+    <link href="http://ptun.io/archives/The-Electronic-Dice.html"/>
+    <id>http://ptun.io/archives/The-Electronic-Dice.html</id>
+    <published>2019-09-16T12:38:55.000Z</published>
+    <updated>2020-04-28T00:20:41.259Z</updated>
+    
+    <summary type="html">
+    
+      A set of &#39;electronically augmented&#39; dice. Completely customizable, they can be used as a drop-in replacement for regular dice, and are configured via bluetooth. They can also be used to keep track of all your rolls, direct your phone to play sound effects, or even used to play DnD online.
+    
+    </summary>
+    
+    
+      <category term="硬件" scheme="http://ptun.io/tags/%E7%A1%AC%E4%BB%B6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>RPi 3 Starboard / Particle Generator</title>
+    <link href="http://ptun.io/archives/RPi-3-Starboard-Particle-Generator.html"/>
+    <id>http://ptun.io/archives/RPi-3-Starboard-Particle-Generator.html</id>
+    <published>2019-09-10T12:46:25.000Z</published>
+    <updated>2020-04-28T00:20:41.259Z</updated>
+    
+    <summary type="html">
+    
+      Are you feeling bored with your Raspberry Pi? Are you ready to command the very elemental forces of the universe, summoning and dismissing photons at will?
+    
+    </summary>
+    
+    
+      <category term="硬件" scheme="http://ptun.io/tags/%E7%A1%AC%E4%BB%B6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>The Create Daily Challenge</title>
+    <link href="http://ptun.io/archives/create-daily.html"/>
+    <id>http://ptun.io/archives/create-daily.html</id>
+    <published>2019-09-09T14:12:08.000Z</published>
+    <updated>2020-04-28T00:20:41.259Z</updated>
+    
+    <summary type="html">
+    
+      This month I invite you to work on creativity and discipline in one habit in what I’m calling the Create Daily Challenge.
+    
+    </summary>
+    
+    
+      <category term="Challenge" scheme="http://ptun.io/tags/Challenge/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>PiSugar Battery for Raspberry Pi zero</title>
+    <link href="http://ptun.io/archives/pisugar-battery-for-raspberry-pi-zero.html"/>
+    <id>http://ptun.io/archives/pisugar-battery-for-raspberry-pi-zero.html</id>
+    <published>2019-09-06T11:05:24.000Z</published>
+    <updated>2020-04-28T00:20:41.258Z</updated>
+    
+    <summary type="html">
+    
+      为树莓派zerow3B专门定制的便携电源模块。除此之外，还提供多款不同场景的3D打印外壳。
+    
+    </summary>
+    
+    
+      <category term="硬件" scheme="http://ptun.io/tags/%E7%A1%AC%E4%BB%B6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Thermochromic Temperature &amp; Humidity Display</title>
+    <link href="http://ptun.io/archives/Thermochromic-Temperature-Humidity-Display.html"/>
+    <id>http://ptun.io/archives/Thermochromic-Temperature-Humidity-Display.html</id>
+    <published>2019-08-20T11:15:11.000Z</published>
+    <updated>2020-04-28T00:20:41.258Z</updated>
+    
+    <summary type="html">
+    
+      根据温度来控制热感应片来显示温度、湿度值的diy电子表。只不过存在一个问题：刷新可能并不是那么高，但创意太赞了。
+    
+    </summary>
+    
+    
+      <category term="硬件" scheme="http://ptun.io/tags/%E7%A1%AC%E4%BB%B6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>可视化追踪太阳行动轨迹</title>
+    <link href="http://ptun.io/archives/suntracker-optimizes-solar-panels-while-visualizing-suns-path.html"/>
+    <id>http://ptun.io/archives/suntracker-optimizes-solar-panels-while-visualizing-suns-path.html</id>
+    <published>2019-08-19T10:19:24.000Z</published>
+    <updated>2020-04-28T00:20:41.258Z</updated>
+    
+    <summary type="html">
+    
+      通过实践追踪太阳行动轨迹，可以实现定向调整光伏板朝向，从而最大化功率输出。
+    
+    </summary>
+    
+    
+      <category term="硬件" scheme="http://ptun.io/tags/%E7%A1%AC%E4%BB%B6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>How to remove &#39;Boot OS X install from partition&#39; from Clover bootloader</title>
+    <link href="http://ptun.io/archives/how-to-remove-boot-os-x-install-from-partition-from-clover-bootloader.html"/>
+    <id>http://ptun.io/archives/how-to-remove-boot-os-x-install-from-partition-from-clover-bootloader.html</id>
+    <published>2019-08-15T06:38:59.000Z</published>
+    <updated>2020-04-28T00:20:41.258Z</updated>
+    
+    <summary type="html">
+    
+      如何解决在Clover界面缺省启动&#39;boot macos install from macintosh hd&#39;且无法通过Clover隐藏其选项的问题
+    
+    </summary>
+    
+    
+      <category term="黑苹果" scheme="http://ptun.io/tags/%E9%BB%91%E8%8B%B9%E6%9E%9C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>How to format a USB external disk for Mac OSX using Disk Utility</title>
+    <link href="http://ptun.io/archives/format-usb-external-disk-mac-osx-using-disk-utility.html"/>
+    <id>http://ptun.io/archives/format-usb-external-disk-mac-osx-using-disk-utility.html</id>
+    <published>2019-08-14T05:39:20.000Z</published>
+    <updated>2020-04-28T00:20:41.258Z</updated>
+    
+    <summary type="html">
+    
+      通常情况下,我们都使用专门工具来格式化硬盘，但其实在Mac环境下，可以直接用命令格式化。
+    
+    </summary>
+    
+    
+      <category term="Mac技巧" scheme="http://ptun.io/tags/Mac%E6%8A%80%E5%B7%A7/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Internet of Dirt a Texting Plant</title>
+    <link href="http://ptun.io/archives/Internet-of-Dirt-a-Texting-Plant.html"/>
+    <id>http://ptun.io/archives/Internet-of-Dirt-a-Texting-Plant.html</id>
+    <published>2019-08-13T10:54:42.000Z</published>
+    <updated>2020-04-28T00:20:41.258Z</updated>
+    
+    <summary type="html">
+    
+      Do you struggle to keep your plants alive? Looking to get started with an IoT project? Why not have your plants text you when they need watering?
+    
+    </summary>
+    
+    
+      <category term="硬件" scheme="http://ptun.io/tags/%E7%A1%AC%E4%BB%B6/"/>
+    
+  </entry>
+  
+</feed>

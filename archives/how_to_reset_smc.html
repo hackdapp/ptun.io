@@ -1,0 +1,555 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="如何重置 Mac 上的系统管理控制器 (SMC), best value SideProject IndieMaker electronic hardware mac efficient Kits good things sharing">
+    <meta name="description" content="在前段时间，遇到一个问题：我平时会使用两个扩展屏来工作，后来换了个工位后重新接线后发现有一个屏死活不显示。实在没招后，咨询苹果客服才知道还有重置smc这么一个操作，后来尝试了一下还真解决了。
+
+SMC 的功能在基于 Intel 的 Mac ">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="monetization" content="$coil.xrptipbot.com/DHaG5sfGQDq0KNSTqynxeQ">
+    <meta name="og:image" content="http://cdn.hackdapp.com/121240.jpg">
+    <meta name="twitter:image:src" content="http://cdn.hackdapp.com/121240.jpg">
+    <title>如何重置 Mac 上的系统管理控制器 (SMC) | 极客豚</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+    <style type="text/css">
+        
+    </style>
+
+    <script src="/libs/jquery/jquery-2.2.0.min.js"></script>
+    <script>(function(i,s,o,g,r,a,m){i["DaoVoiceObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset="utf-8";m.parentNode.insertBefore(a,m)})(window,document,"script",('https:' == document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/324f5ec0.js","daovoice")</script>
+
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+
+
+<body>
+
+<header class="navbar-fixed">
+    <nav id="headNav" class="bg-color">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">极客豚</span>
+                </a>
+
+
+            </div>
+
+
+
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fa fa-navicon"></i></a>
+<ul class="right">
+    
+    <li class="hide-on-med-and-down">
+        <a href="/" class="waves-effect waves-light">
+            
+            <i class="fa fa-home"></i>
+            
+            <span>Index</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/challege" class="waves-effect waves-light">
+            
+            <i class="fa fa-bookmark"></i>
+            
+            <span>Challege</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/about" class="waves-effect waves-light">
+            
+            <i class="fa fa-user-circle-o"></i>
+            
+            <span>About</span>
+        </a>
+    </li>
+    
+    <!-- <li>
+        <a href="#" class="modal-trigger waves-effect waves-light">
+          <img src="http://cdn.hackdapp.com/qrcode_for_gh_16affcd16f4a_430.jpg" class="mp-chat" alt="LOGO">
+        </a>
+    </li> -->
+    <li>
+        <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+            <i id="searchIcon" class="fa fa-search" title="Search"></i>
+        </a>
+    </li>
+</ul>
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">极客豚</div>
+        <div class="logo-desc">
+            
+            Focus on the best value information, including SideProject, IndieMaker, diy hardware, mac efficient kits and good things.
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li>
+            <a href="/" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-home"></i>
+                
+                Index
+            </a>
+        </li>
+        
+        <li>
+            <a href="/challege" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-bookmark"></i>
+                
+                Challege
+            </a>
+        </li>
+        
+        <li>
+            <a href="/about" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-user-circle-o"></i>
+                
+                About
+            </a>
+        </li>
+        
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+    </nav>
+
+</header>
+<!-- <div style="border:1px red solid; width: 1780px; margin: 5px auto">微信公众号: hackdapp</div> -->
+
+
+
+
+
+<div class="bg-cover pd-header" style="background-image: url('http://cdn.hackdapp.com/121240.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <div class="description center-align post-title">
+                        如何重置 Mac 上的系统管理控制器 (SMC)
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="container content">
+
+    
+    <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/日增一技/" target="_blank">
+                                <span class="chip bg-color">日增一技</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                <div class="post-date info-break-policy">
+                    <i class="fa fa-calendar-minus-o fa-fw"></i>Publish Date:&nbsp;&nbsp;
+                    2019-07-24
+                </div>
+
+                
+				
+				
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="fa fa-eye fa-fw"></i>Read Count:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+        </div>
+        <hr class="clearfix">
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <p>在前段时间，遇到一个问题：我平时会使用两个扩展屏来工作，后来换了个工位后重新接线后发现有一个屏死活不显示。实在没招后，咨询苹果客服才知道还有重置smc这么一个操作，后来尝试了一下还真解决了。</p>
+<hr>
+<h2 id="SMC-的功能"><a href="#SMC-的功能" class="headerlink" title="SMC 的功能"></a>SMC 的功能</h2><p>在基于 Intel 的 Mac 电脑上，SMC 负责管理以下及其他低层功能：</p>
+<ul>
+<li>对按下电源按钮的操作做出响应</li>
+<li>对 Mac 笔记本电脑上显示屏上盖的开合做出响应</li>
+<li>电池管理</li>
+<li>热能管理</li>
+<li>突发移动感应器 (SMS)</li>
+<li>环境光度感应</li>
+<li>键盘背光</li>
+<li>状态指示灯 (SIL) 管理</li>
+<li>电池状态指示灯</li>
+<li>为某些 iMac 显示器选择外部（而非内部）视频来源</li>
+</ul>
+<hr>
+<h3 id="重置-SMC-之前"><a href="#重置-SMC-之前" class="headerlink" title="重置 SMC 之前"></a>重置 SMC 之前</h3><p>重置 SMC 之前，请按顺序尝试以下各步骤。每完成一个步骤后，都请进行测试，以确定问题是不是仍会出现。</p>
+<ol>
+<li>如果 Mac 没有响应，请按住电源按钮，直到电脑关机。所有已打开的应用程序中没有存储的数据都会丢失。然后，再次按下电源按钮以开启 Mac。</li>
+<li>按下 Command-Option*-Escape 以强制退出任何没有响应的应用程序。</li>
+<li>选取苹果 () 菜单 &gt;“睡眠”，以将 Mac 置于睡眠状态。待电脑进入睡眠状态后，将其唤醒。</li>
+<li>选取苹果菜单 &gt;“重新启动”，以重新启动 Mac。</li>
+<li>选取苹果菜单 &gt;“关机”以将 Mac 关机，然后再次按下电源按钮以开启 Mac。</li>
+<li>如果您使用的是存在电源或电池问题的 Mac 笔记本电脑，请按照以下步骤操作：</li>
+</ol>
+<p>从 Mac 和墙壁电源插座上拔下电源适配器并等待数秒钟，然后再重新插入。</p>
+<ol>
+<li>选取苹果菜单 &gt;“关机”。</li>
+<li>在 Mac 关机后，拆下再重新装入电池（如果可拆卸）。</li>
+<li>再次按下电源按钮以开启 Mac。</li>
+<li>如果问题仍未解决，您可能需要按照以下步骤重置 SMC。</li>
+</ol>
+<hr>
+<h3 id="如何重置-Mac-笔记本电脑上的-SMC"><a href="#如何重置-Mac-笔记本电脑上的-SMC" class="headerlink" title="如何重置 Mac 笔记本电脑上的 SMC"></a>如何重置 Mac 笔记本电脑上的 SMC</h3><p>如果您使用的是 MacBook Pro（2018 年），请跳过这个部分，直接查看与您的 Mac 相对应的部分。</p>
+<p>要重置 Mac 笔记本电脑上的 SMC，请先确定电池是不是可以拆卸。大多数旧款 Mac 笔记本电脑都装有可拆卸电池。装有不可拆卸电池的 Mac 笔记本电脑包括 MacBook Pro（2009 年初及更新机型）、所有机型的 MacBook Air、MacBook（2009 年末）和 MacBook（视网膜显示屏，12 英寸，2015 年初及更新机型）。进一步了解 Mac 笔记本电脑电池。</p>
+<h4 id="如果电池不可拆卸："><a href="#如果电池不可拆卸：" class="headerlink" title="如果电池不可拆卸："></a>如果电池不可拆卸：</h4><ol>
+<li>选取苹果菜单 &gt;“关机”。</li>
+<li>在 Mac 关机后，按下内建键盘左侧的 Shift-Control-Option，然后同时按下电源按钮。按住这些按键和电源按钮 10 秒钟。如果您的 MacBook Pro 配有触控 ID，则触控 ID 按钮也是电源按钮。</li>
+<li>松开所有按键。</li>
+<li>再次按下电源按钮以开启 Mac。</li>
+</ol>
+<h4 id="如果电池可拆卸："><a href="#如果电池可拆卸：" class="headerlink" title="如果电池可拆卸："></a>如果电池可拆卸：</h4><ol>
+<li>将 Mac 关机。</li>
+<li>拆下电池。如果您需要拆卸电池方面的协助，请联系 Apple 授权服务提供商或 Apple Store 零售店。</li>
+<li>按住电源按钮 5 秒钟。</li>
+<li>重新安装电池。</li>
+<li>再次按下电源按钮以开启 Mac。</li>
+</ol>
+<p>原文链接: <a href="https://support.apple.com/zh-cn/HT201295" target="_blank" rel="noopener">如何重置 Mac 上的系统管理控制器 (SMC) - Apple 支持</a></p>
+<center> — The End — </center>
+
+<h1 id="欢迎关注我的公众号"><a href="#欢迎关注我的公众号" class="headerlink" title="欢迎关注我的公众号"></a>欢迎关注我的公众号</h1><h2 id><a href="#" class="headerlink" title="  "></a><center> <img src="http://cdn.hackdapp.com/2019-04-03-mysign.jpg" alt> </center></h2><pre><code>       _                 _
+ _ __ | |_ _   _ _ __   (_) ___
+| &#39;_ \| __| | | | &#39;_ \  | |/ _ \
+| |_) | |_| |_| | | | |_| | (_) |
+| .__/ \__|\__,_|_| |_(_)_|\___/
+|_|
+</code></pre><pre><code>极客豚:   http://ptun.io
+===============================
+我的个人博客:  https://www.hackdapp.com/
+我的哔哩哔哩:  https://space.bilibili.com/17360859
+我的github:   https://github.com/hackdapp
+IndieMakers: https://www.indiemakers.cn
+我的微信公众号: hackdapp
+===============================
+联系邮箱：55269778@qq.com
+</code></pre>
+            </div>
+            <hr>
+
+            
+
+            <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+
+<div id="article-share">
+    
+    <div class="social-share" data-disabled="qzone, qq, weibo, douban"></div>
+    
+</div>
+
+<script src="/libs/share/js/social-share.min.js"></script>
+
+            
+
+
+        </div>
+    </div>
+
+    
+        <link rel="stylesheet" href="/libs/gitalk/gitalk.css">
+<link rel="stylesheet" href="/css/my-gitalk.css">
+
+<div class="card gitalk-card" data-aos="fade-up">
+    <div id="gitalk-container" class="card-content"></div>
+</div>
+
+<script src="/libs/gitalk/gitalk.min.js"></script>
+<script>
+    let gitalk = new Gitalk({
+        clientID: '580230fd6334c4654ed5',
+        clientSecret: '3f91c3b703b9a17cae5b95f9b56228c3e30e9878',
+        repo: 'ptun.io',
+        owner: 'hackdapp',
+        admin: "hackdapp",
+        id: '2019-07-24T18-54-19',
+        distractionFreeMode: false  // Facebook-like distraction free mode
+    });
+
+    gitalk.render('gitalk-container');
+</script>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6 overflow-policy" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fa fa-chevron-left"></i>&nbsp;Previous</div>
+            <div class="card">
+                <a href="/archives/your_lametric.html">
+                    <div class="card-image">
+                        
+                        <img src="http://cdn.hackdapp.com/111030.jpg" class="responsive-img" alt="LaMetric TIME">
+                        
+                        <span class="card-title">LaMetric TIME</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            在前两期中曾经介绍过一个DIY - YouTube Desktop Notifier | 极客豚, 今天才发现原来是源于这款产品(Connected clock for a Smart Home | LaMetric Time)的流行, 不
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-07-25
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fa fa-user fa-fw"></i>
+                            hackhook
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/硬件/" target="_blank">
+                        <span class="chip bg-color">硬件</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6 overflow-policy" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                Next&nbsp;<i class="fa fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/archives/q4_202.html">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="Q4.202 Tossing a handful of loose change into the fountain">
+                        
+                        <span class="card-title">Q4.202 Tossing a handful of loose change into the fountain</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            Q4.202 Tossing a handful of loose change into the fountain, __.
+A.  a wish was made for love
+B.  Alex wished for love
+C.
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-07-23
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fa fa-user fa-fw"></i>
+                            hackhook
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/DailyGrammar/" target="_blank">
+                        <span class="chip bg-color">DailyGrammar</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+</div>
+
+
+
+    
+
+</main>
+
+
+<footer class="page-footer bg-color">
+    <div class="container row center-align">
+        <div class="col s12 m8 l8 copy-right">
+
+            
+
+            
+			         
+                <br>
+                
+                <span id="busuanzi_container_site_pv">
+                    <i class="fa fa-heart-o"></i>
+                    本站总访问量 <span id="busuanzi_value_site_pv" class="white-color"></span>
+                </span>
+                
+                
+                <span id="busuanzi_container_site_uv">
+                    <i class="fa fa-users"></i>
+                    次,&nbsp;访客数 <span id="busuanzi_value_site_uv" class="white-color"></span> 人.
+                </span>
+                
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/hackdapp" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fa fa-github"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fa fa-rss"></i>
+    </a>
+</div>
+    </div>
+
+</footer>
+
+<div class="progress-bar"></div>
+
+<script type="text/javascript">
+  daovoice('init', {
+    app_id: "324f5ec0"
+  });
+  daovoice('update');
+</script>
+
+
+<!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fa fa-search"></i>&nbsp;&nbsp;Search</span>
+            <input type="search" id="searchInput" name="s" placeholder="Please enter a search keyword" class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script src="/js/search.js"></script>
+<script type="text/javascript">
+$(function () {
+    searchFunc("/" + "search.xml", 'searchInput', 'searchResult');
+});
+</script>
+<!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fa fa-angle-up"></i>
+    </a>
+</div>
+
+
+<script src="/libs/materialize/materialize.min.js"></script>
+<script src="/libs/masonry/masonry.pkgd.min.js"></script>
+<script src="/libs/aos/aos.js"></script>
+<script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+<script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+<script src="/js/matery.js"></script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-132319949-2"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+    gtag('config', 'UA-132319949-2');
+</script>
+
+
+
+
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+
+
+</body>
+</html>

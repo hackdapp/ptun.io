@@ -1,0 +1,578 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="RS485 – ARDUINO AND INDUSTRIAL DISTANCE SENSOR, best value SideProject IndieMaker electronic hardware mac efficient Kits good things sharing">
+    <meta name="description" content="I have in my hand a distance laser sensor with high precision and speed. It is used in industrial environments for objec">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="monetization" content="$coil.xrptipbot.com/DHaG5sfGQDq0KNSTqynxeQ">
+    <meta name="og:image" content="http://cdn.hackdapp.com/103023.jpg">
+    <meta name="twitter:image:src" content="http://cdn.hackdapp.com/103023.jpg">
+    <title>RS485 – ARDUINO AND INDUSTRIAL DISTANCE SENSOR | 极客豚</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+    <style type="text/css">
+        
+    </style>
+
+    <script src="/libs/jquery/jquery-2.2.0.min.js"></script>
+    <script>(function(i,s,o,g,r,a,m){i["DaoVoiceObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset="utf-8";m.parentNode.insertBefore(a,m)})(window,document,"script",('https:' == document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/324f5ec0.js","daovoice")</script>
+
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+
+
+<body>
+
+<header class="navbar-fixed">
+    <nav id="headNav" class="bg-color">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">极客豚</span>
+                </a>
+
+
+            </div>
+
+
+
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fa fa-navicon"></i></a>
+<ul class="right">
+    
+    <li class="hide-on-med-and-down">
+        <a href="/" class="waves-effect waves-light">
+            
+            <i class="fa fa-home"></i>
+            
+            <span>Index</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/challege" class="waves-effect waves-light">
+            
+            <i class="fa fa-bookmark"></i>
+            
+            <span>Challege</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/about" class="waves-effect waves-light">
+            
+            <i class="fa fa-user-circle-o"></i>
+            
+            <span>About</span>
+        </a>
+    </li>
+    
+    <!-- <li>
+        <a href="#" class="modal-trigger waves-effect waves-light">
+          <img src="http://cdn.hackdapp.com/qrcode_for_gh_16affcd16f4a_430.jpg" class="mp-chat" alt="LOGO">
+        </a>
+    </li> -->
+    <li>
+        <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+            <i id="searchIcon" class="fa fa-search" title="Search"></i>
+        </a>
+    </li>
+</ul>
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">极客豚</div>
+        <div class="logo-desc">
+            
+            Focus on the best value information, including SideProject, IndieMaker, diy hardware, mac efficient kits and good things.
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li>
+            <a href="/" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-home"></i>
+                
+                Index
+            </a>
+        </li>
+        
+        <li>
+            <a href="/challege" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-bookmark"></i>
+                
+                Challege
+            </a>
+        </li>
+        
+        <li>
+            <a href="/about" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-user-circle-o"></i>
+                
+                About
+            </a>
+        </li>
+        
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+    </nav>
+
+</header>
+<!-- <div style="border:1px red solid; width: 1780px; margin: 5px auto">微信公众号: hackdapp</div> -->
+
+
+
+
+
+<div class="bg-cover pd-header" style="background-image: url('http://cdn.hackdapp.com/103023.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <div class="description center-align post-title">
+                        RS485 – ARDUINO AND INDUSTRIAL DISTANCE SENSOR
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="container content">
+
+    
+    <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/硬件/" target="_blank">
+                                <span class="chip bg-color">硬件</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                <div class="post-date info-break-policy">
+                    <i class="fa fa-calendar-minus-o fa-fw"></i>Publish Date:&nbsp;&nbsp;
+                    2019-08-12
+                </div>
+
+                
+				
+				
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="fa fa-eye fa-fw"></i>Read Count:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+        </div>
+        <hr class="clearfix">
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <p>I have in my hand a distance laser sensor with high precision and speed. It is used in industrial environments for object positioning or detection applications. According to technical documents, I found it can communicate with other devices via RS485. I spent the weekend to learn it and find ways to communicate with cheap CPU - Arduino. And finally, I succeeded in reading data from it and displaying the distance value on the led screen.</p>
+<p>And I’m willing to share this test with you. Let’s start with the video below:</p>
+<hr>
+<h2 id="Step-1-B-O-M"><a href="#Step-1-B-O-M" class="headerlink" title="Step 1: B.O.M"></a>Step 1: B.O.M</h2><p><img src="http://cdn.hackdapp.com/101821.jpg" alt></p>
+<p>Main components include:</p>
+<ul>
+<li>Arduino Uno R3.</li>
+<li>Arduino Mega 2560. (Option to check the RS485 communication because it has multiple serial ports. We can use Arduino Mega 2560 to print the value on Arduino IDE for program debugging).</li>
+<li>Module RS-485. It is very cheap, about $0.4 on AliExpress.</li>
+<li>LOL Shield Matrix. For LoLShiled, I did it by myself at home. You can refer to PCB design at: <a href="https://github.com/jprodgers/LoLshield" target="_blank" rel="noopener">https://github.com/jprodgers/LoLshield</a> &amp; make one for yourself.</li>
+<li>Distance Laser Sensor.</li>
+<li>40 pin male header (4 pcs).</li>
+<li>40 pin female header (4 pcs).</li>
+<li>Double Side Prototype PCB.</li>
+<li>Ribbon Cable.</li>
+<li>Power Supply 5VDC and 24VDC. For me, I used a power supply PS 307 from Siemens.</li>
+</ul>
+<h2 id="Step-2-CIRCUIT-DIAGRAM-AND-ASSEMBLY"><a href="#Step-2-CIRCUIT-DIAGRAM-AND-ASSEMBLY" class="headerlink" title="Step 2: CIRCUIT DIAGRAM AND ASSEMBLY"></a>Step 2: CIRCUIT DIAGRAM AND ASSEMBLY</h2><p><img src="http://cdn.hackdapp.com/101915.jpg" alt></p>
+<p>The circuit schematic is shown on picture above.</p>
+<p>My idea is to read distance data and display this value on LoLShield. To do this, I had to turn the RS-485 module into a Shield to plug it on the Arduino and then Lolshield matrix will be plugged on the top.</p>
+<ul>
+<li>Soldering RS-485 Shield:<br>RS-485 Shield after soldering with male header at bottom and female header on the top.<br><img src="http://cdn.hackdapp.com/102515.jpg" alt><img src="http://cdn.hackdapp.com/102634.jpg" alt></li>
+<li>LoLShield:<br>For LoLShiled, I did it by myself. It is not easy for etching a double sided copper clad PCB board at home. You can refer to PCB design at: <a href="https://github.com/jprodgers/LoLshield" target="_blank" rel="noopener">https://github.com/jprodgers/LoLshield</a> &amp; make one for yourself.<br><img src="https://www.instructables.com/files/deriv/FVE/E614/JYMTC0H6/FVEE614JYMTC0H6.LARGE.jpg" alt></li>
+<li>Plugging 2 shields on Arduino :<br><img src="https://www.instructables.com/files/deriv/FZJ/X7FR/JYMTC2L9/FZJX7FRJYMTC2L9.LARGE.jpg" alt></li>
+<li>Make a protection box with some open holes for wires connection and programming cable:<br><img src="https://www.instructables.com/files/deriv/FUA/OPE7/JYMTC0GH/FUAOPE7JYMTC0GH.LARGE.jpg" alt></li>
+<li>Connecting circuit board to laser sensor and power supply:<br><img src="https://www.instructables.com/files/deriv/FNW/PXTF/JYMTC0HW/FNWPXTFJYMTC0HW.LARGE.jpg" alt></li>
+</ul>
+<p>Note: The 0V/ GND of power supply 5VDC and 24VDC are connected together.</p>
+<h2 id="Step-3-DISTANCE-LASER-SENSOR-TECHNICAL-SPEC"><a href="#Step-3-DISTANCE-LASER-SENSOR-TECHNICAL-SPEC" class="headerlink" title="Step 3: DISTANCE LASER SENSOR - TECHNICAL SPEC"></a>Step 3: DISTANCE LASER SENSOR - TECHNICAL SPEC</h2><p>The laser distance sensors S80 SERIES (DATALOGIC) with time of flight measurement are suitable for long distance measurements offering constant performances on the entire range. In my case, this S80-Y0 sensors function as proximity on respectively a 0.3 - 4 m distance, or from 0.3 to 7 m with scalable range.</p>
+<p>About RS485 serial interface:</p>
+<p>The serial communication parameters are: 9600 baud, no parity, 8 data bits, 1 stop bit. It is matching with serial interface “SERIAL_8N1” in “HardwareSerial” Arduino’s library.</p>
+<p>The SYNC input is used to determine the communication direction, and in particular if low (active) direction Sensor-&gt;Arduino, if high (passive) Arduino-&gt;Sensor. You can review the diagram in Step 2, the SYNC signal is connected to 0V/GND to active receive mode.</p>
+<p><img src="http://cdn.hackdapp.com/102321.jpg" alt></p>
+<p>With SYNC active, the sensor continuously transmits the detected distance value (with a precision of 12bit) by means of a binary data format. 2 byte are used; one with bit 0 at logic level 1 identifies the more important byte.</p>
+<p><img src="http://cdn.hackdapp.com/102336.jpg" alt></p>
+<h2 id="Step-4-DISPLAY-EXPLANATION"><a href="#Step-4-DISPLAY-EXPLANATION" class="headerlink" title="Step 4: DISPLAY EXPLANATION"></a>Step 4: DISPLAY EXPLANATION</h2><p>The LoL Shield is a 9x14 charlieplexing LED matrix for the Arduino and this design DOESN’T include current limiting resistors. The LEDs are individually addressable, so we can use it to display information in a 9×14 grid.</p>
+<p>The LoL Shield leaves D0 (Rx), D1 (Tx) and analog pins A0 to A5 free for inputs. For detail, let see picture below for LoLShield pin usage:</p>
+<p><img src="http://cdn.hackdapp.com/102159.jpg" alt></p>
+<p>From my schematic, we can see:</p>
+<ul>
+<li>D0 (Rx) and D1 (Tx): connect to RO and DI of RS485 module.</li>
+<li>A0: connecting to Led indicator.</li>
+<li>A1: connecting to DE/RE of RS485 module.</li>
+<li>D2 to D13: connecting to LoLShield.</li>
+</ul>
+<p>To show distance value with a precision of 12bit (4 digits number), I used a small font size 3x5 for digits as below:<br><img src="http://cdn.hackdapp.com/102229.jpg" alt></p>
+<p>LOL Shield only has 14 columns so it can’t display all 4 digits so I just show 3 digits in 3x5 small font above and luckily LoL Shield has 9 rows and it can display the number of units according to the number of leds from 0 to 9. Let’s see the below picture to clarify my explanation:<br><img src="http://cdn.hackdapp.com/102246.jpg" alt></p>
+<h2 id="Step-5-PROGRAMMING"><a href="#Step-5-PROGRAMMING" class="headerlink" title="Step 5: PROGRAMMING"></a>Step 5: PROGRAMMING</h2><p>The laser sensor will send the distance value in range 250mm to 4020mm to Arduino as explained below:</p>
+<ul>
+<li>Distance Value &lt; 250 - Low Limit. Print “LL” on the LoLShield screen.</li>
+<li>250&lt;= Distance Value &lt;= 4020 - In Measuring Range. Print the distance on the LoLShield screen.</li>
+<li>Distance Value &gt; 4020 - High Limit. Print “HH” on the LoLShield screen.</li>
+<li>And in case, the RS485 is not available, I print “FF” on the LoLShield screen.</li>
+</ul>
+<p>We can double check with the distance value shown on the small 4-digit display attached on the Laser Sensor.</p>
+<p>The full code of this project is posted in my GitHub: <a href="https://github.com/tuenhidiy/RS485-ARDUINO-AND-IND.." target="_blank" rel="noopener">https://github.com/tuenhidiy/RS485-ARDUINO-AND-IND..</a>.</p>
+<p>‘’’</p>
+<p>#include <avr pgmspace.h></avr></p>
+<p>#include “Charliplexing.h”</p>
+<p>#include “Myfont.h”</p>
+<p>#include “Font.h”</p>
+<p>#include &lt;Hardwareserial.h&gt;</p>
+<p>#define BAUDRATE 9600</p>
+<p>// Font 3x5 for the digits<br>int digits[][15] = {<br>   {1,1,1,1,0,1,1,0,1,1,0,1,1,1,1}<br>  ,{0,0,1,0,0,1,0,0,1,0,0,1,0,0,1}<br>  ,{1,1,1,0,0,1,1,1,1,1,0,0,1,1,1}<br>  ,{1,1,1,0,0,1,1,1,1,0,0,1,1,1,1}<br>  ,{1,0,1,1,0,1,1,1,1,0,0,1,0,0,1}<br>  ,{1,1,1,1,0,0,1,1,1,0,0,1,1,1,1}<br>  ,{1,0,0,1,0,0,1,1,1,1,0,1,1,1,1}<br>  ,{1,1,1,0,0,1,0,0,1,0,0,1,0,0,1}<br>  ,{1,1,1,1,0,1,1,1,1,1,0,1,1,1,1}<br>  ,{1,1,1,1,0,1,1,1,1,0,0,1,0,0,1}<br>};</p>
+<p>void setup()<br>{<br>  LedSign::Init(DOUBLE_BUFFER);<br>  Serial.begin(BAUDRATE,SERIAL_8N1);  //Using Serial port with 9600 baudrate, non-parity, 8 data bits, 1 stop bit.<br>  pinMode(A1, OUTPUT);                //DE/RE Controling pin of RS-485<br>  pinMode(A0, OUTPUT);                //LED Indicator<br>}<br>void loop()<br>{<br>  byte getdata[2];<br>  byte High_Byte;<br>  byte Low_Byte;<br>  unsigned int wordx;<br>  boolean D7=0;<br>  // Enable Received<br>  digitalWrite(A1,LOW);     //DE/RE=LOW Receive Enabled<br>  // Receive data from Laser Sensor<br>  if(Serial.available())<br>    {<br>      digitalWrite(A0,HIGH);//LED<br>      for (byte i=0; i&lt;2; i++)<br>        {<br>          getdata[i]=Serial.read();<br>          delay(15);<br>        }<br>    }<br>  else<br>    {<br>    digitalWrite(A0,LOW);   //LED<br>    LedSign::Clear();<br>    Myfont::Draw(0, ‘F’);<br>    Myfont::Draw(9, ‘F’);<br>    delay(1000);<br>    LedSign::Clear();<br>    }<br>  // Check the correct data<br>if(Serial.available())<br>  {<br>  if (bitRead(getdata[0],0)==0)<br>    {<br>      Low_Byte=getdata[0];<br>    }<br>  if (bitRead(getdata[1],0)==1)<br>    {<br>      High_Byte=getdata[1];<br>    }</p>
+<p>  // Two bytes conversion<br>  // | 0 0 D11 D10 D9 D8 D7 1 | | D6 D5 D4 D3 D2 D1 D01 0 |<br>  // |        High_Byte       | |       Low_Byte          |</p>
+<p>  D7 = bitRead(High_Byte,1);<br>  Low_Byte=(Low_Byte &amp; 0xFE) &gt;&gt; 1;<br>  bitWrite(Low_Byte, 7, D7);<br>  High_Byte=(High_Byte &amp; 0x3F) &gt;&gt; 2;<br>  wordx = (High_Byte &lt;&lt; 8) | Low_Byte;</p>
+<p>// Print all digits on LoLShield screeen.<br>  if(wordx &lt; 250)<br>    {<br>      LedSign::Clear();<br>      Myfont::Draw(0, ‘L’);<br>      Myfont::Draw(9, ‘L’);<br>    }<br>  else if ((wordx &gt;= 250)&amp; (wordx &lt;= 4020))<br>  {<br>  LedSign::Clear();<br>  // first digit - thousand<br>  for (int i=0; i&lt;15; i++)<br>  {<br>    LedSign::Set((i % 3)+ 0,(i/3)+2, digits[(wordx/1000) % 10][i]);<br>  }<br>  // second digit - hundred<br>  for (int i=0; i&lt;15; i++)<br>    {<br>      LedSign::Set((i % 3)+ 4,(i/3)+2, digits[(wordx/ 100) % 10][i]);<br>    }<br>  // third digit - Ten<br>  for (int i=0; i&lt;15; i++)<br>    {<br>      LedSign::Set((i % 3)+ 8,(i/3)+2, digits[(wordx/10) %10][i]);<br>    }<br>  // fourth digit - Unit<br>  for (int y=0; y &lt; 9; y++)<br>    {<br>      if (y &lt; (wordx %10))<br>        {<br>          LedSign::Set(13, y, 1);        // set the LED on<br>        }<br>      else<br>        {<br>          LedSign::Set(13, y, 0);       // set the LED off<br>        }<br>    }<br>  }<br>  else<br>  {<br>    LedSign::Clear();<br>    Myfont::Draw(0, ‘H’);<br>    Myfont::Draw(9, ‘H’);<br>  }<br>}<br>  LedSign::Flip();<br>}</p>
+<p>‘’’</p>
+<h2 id="Step-6-FINISH"><a href="#Step-6-FINISH" class="headerlink" title="Step 6: FINISH"></a>Step 6: FINISH</h2><p><img src="http://cdn.hackdapp.com/102029.jpg" alt></p>
+<p>My hobby is always finding ways to connect Arduino to PLCs or sensors that are being used in industrial environments. It would be great if we could read / write/ integrate the low cost CPUs or circuits into industrial automation systems.</p>
+<p>Maybe a bit late but please vote for me in “SENSORS CONTEST”.</p>
+<p>THANK FOR YOUR WATCHING!</p>
+<p>原文链接: <a href="https://www.instructables.com/id/RS485-ARDUINO-AND-INDUSTRIAL-DISTANCE-SENSOR/" target="_blank" rel="noopener">RS485 – ARDUINO AND INDUSTRIAL DISTANCE SENSOR: 6 Steps (with Pictures)</a></p>
+<center> — The End — </center>
+
+<h1 id="欢迎关注我的公众号"><a href="#欢迎关注我的公众号" class="headerlink" title="欢迎关注我的公众号"></a>欢迎关注我的公众号</h1><center> <img src="http://cdn.hackdapp.com/2019-04-03-mysign.jpg" alt> </center>
+
+<hr>
+<pre><code>       _                 _
+ _ __ | |_ _   _ _ __   (_) ___
+| &#39;_ \| __| | | | &#39;_ \  | |/ _ \
+| |_) | |_| |_| | | | |_| | (_) |
+| .__/ \__|\__,_|_| |_(_)_|\___/
+|_|
+</code></pre><pre><code>极客豚:   http://ptun.io
+===============================
+我的个人博客:  https://www.hackdapp.com/
+我的哔哩哔哩:  https://space.bilibili.com/17360859
+我的github:   https://github.com/hackdapp
+IndieMakers: https://www.indiemakers.cn
+我的微信公众号: hackdapp
+===============================
+联系邮箱：55269778@qq.com
+</code></pre>
+            </div>
+            <hr>
+
+            
+
+            <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+
+<div id="article-share">
+    
+    <div class="social-share" data-disabled="qzone, qq, weibo, douban"></div>
+    
+</div>
+
+<script src="/libs/share/js/social-share.min.js"></script>
+
+            
+
+
+        </div>
+    </div>
+
+    
+        <link rel="stylesheet" href="/libs/gitalk/gitalk.css">
+<link rel="stylesheet" href="/css/my-gitalk.css">
+
+<div class="card gitalk-card" data-aos="fade-up">
+    <div id="gitalk-container" class="card-content"></div>
+</div>
+
+<script src="/libs/gitalk/gitalk.min.js"></script>
+<script>
+    let gitalk = new Gitalk({
+        clientID: '580230fd6334c4654ed5',
+        clientSecret: '3f91c3b703b9a17cae5b95f9b56228c3e30e9878',
+        repo: 'ptun.io',
+        owner: 'hackdapp',
+        admin: "hackdapp",
+        id: '2019-08-12T18-17-19',
+        distractionFreeMode: false  // Facebook-like distraction free mode
+    });
+
+    gitalk.render('gitalk-container');
+</script>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6 overflow-policy" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fa fa-chevron-left"></i>&nbsp;Previous</div>
+            <div class="card">
+                <a href="/archives/Internet-of-Dirt-a-Texting-Plant.html">
+                    <div class="card-image">
+                        
+                        <img src="http://cdn.hackdapp.com/111558.jpg" class="responsive-img" alt="Internet of Dirt a Texting Plant">
+                        
+                        <span class="card-title">Internet of Dirt a Texting Plant</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+Do you struggle to keep your plants alive? Looking to get started with an IoT project? Why not have your plants text yo
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-08-13
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fa fa-user fa-fw"></i>
+                            hackhook
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/硬件/" target="_blank">
+                        <span class="chip bg-color">硬件</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6 overflow-policy" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                Next&nbsp;<i class="fa fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/archives/the-best-book-to-read-as-a-developer-1h4m.html">
+                    <div class="card-image">
+                        
+                        <img src="http://cdn.hackdapp.com/104826.jpg" class="responsive-img" alt="The Best Book to Read as a Developer">
+                        
+                        <span class="card-title">The Best Book to Read as a Developer</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            I was able to determine that the book is now open sourced, here is a pdf available online. If it’s between reading the b
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-08-09
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fa fa-user fa-fw"></i>
+                            hackhook
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Book/" target="_blank">
+                        <span class="chip bg-color">Book</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+</div>
+
+
+
+    
+
+</main>
+
+
+<footer class="page-footer bg-color">
+    <div class="container row center-align">
+        <div class="col s12 m8 l8 copy-right">
+
+            
+
+            
+			         
+                <br>
+                
+                <span id="busuanzi_container_site_pv">
+                    <i class="fa fa-heart-o"></i>
+                    本站总访问量 <span id="busuanzi_value_site_pv" class="white-color"></span>
+                </span>
+                
+                
+                <span id="busuanzi_container_site_uv">
+                    <i class="fa fa-users"></i>
+                    次,&nbsp;访客数 <span id="busuanzi_value_site_uv" class="white-color"></span> 人.
+                </span>
+                
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/hackdapp" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fa fa-github"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fa fa-rss"></i>
+    </a>
+</div>
+    </div>
+
+</footer>
+
+<div class="progress-bar"></div>
+
+<script type="text/javascript">
+  daovoice('init', {
+    app_id: "324f5ec0"
+  });
+  daovoice('update');
+</script>
+
+
+<!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fa fa-search"></i>&nbsp;&nbsp;Search</span>
+            <input type="search" id="searchInput" name="s" placeholder="Please enter a search keyword" class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script src="/js/search.js"></script>
+<script type="text/javascript">
+$(function () {
+    searchFunc("/" + "search.xml", 'searchInput', 'searchResult');
+});
+</script>
+<!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fa fa-angle-up"></i>
+    </a>
+</div>
+
+
+<script src="/libs/materialize/materialize.min.js"></script>
+<script src="/libs/masonry/masonry.pkgd.min.js"></script>
+<script src="/libs/aos/aos.js"></script>
+<script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+<script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+<script src="/js/matery.js"></script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-132319949-2"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+    gtag('config', 'UA-132319949-2');
+</script>
+
+
+
+
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+
+
+</body>
+</html>

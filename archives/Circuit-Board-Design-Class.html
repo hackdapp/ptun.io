@@ -1,0 +1,521 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="CIRCUIT BOARD DESIGN CLASS, best value SideProject IndieMaker electronic hardware mac efficient Kits good things sharing">
+    <meta name="description" content="
+In this class, you will learn how to design a custom printed circuit board from a breadboard prototype. This is useful ">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="monetization" content="$coil.xrptipbot.com/DHaG5sfGQDq0KNSTqynxeQ">
+    <meta name="og:image" content="https://cdn.instructables.com/FI3/2N7C/J1WEQNJ3/FI32N7CJ1WEQNJ3.LARGE.jpg?auto=webp&amp;&amp;frame=1&amp;width=320">
+    <meta name="twitter:image:src" content="https://cdn.instructables.com/FI3/2N7C/J1WEQNJ3/FI32N7CJ1WEQNJ3.LARGE.jpg?auto=webp&amp;&amp;frame=1&amp;width=320">
+    <title>CIRCUIT BOARD DESIGN CLASS | 极客豚</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+    <style type="text/css">
+        
+    </style>
+
+    <script src="/libs/jquery/jquery-2.2.0.min.js"></script>
+    <script>(function(i,s,o,g,r,a,m){i["DaoVoiceObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset="utf-8";m.parentNode.insertBefore(a,m)})(window,document,"script",('https:' == document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/324f5ec0.js","daovoice")</script>
+
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+
+
+<body>
+
+<header class="navbar-fixed">
+    <nav id="headNav" class="bg-color">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">极客豚</span>
+                </a>
+
+
+            </div>
+
+
+
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fa fa-navicon"></i></a>
+<ul class="right">
+    
+    <li class="hide-on-med-and-down">
+        <a href="/" class="waves-effect waves-light">
+            
+            <i class="fa fa-home"></i>
+            
+            <span>Index</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/challege" class="waves-effect waves-light">
+            
+            <i class="fa fa-bookmark"></i>
+            
+            <span>Challege</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/about" class="waves-effect waves-light">
+            
+            <i class="fa fa-user-circle-o"></i>
+            
+            <span>About</span>
+        </a>
+    </li>
+    
+    <!-- <li>
+        <a href="#" class="modal-trigger waves-effect waves-light">
+          <img src="http://cdn.hackdapp.com/qrcode_for_gh_16affcd16f4a_430.jpg" class="mp-chat" alt="LOGO">
+        </a>
+    </li> -->
+    <li>
+        <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+            <i id="searchIcon" class="fa fa-search" title="Search"></i>
+        </a>
+    </li>
+</ul>
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">极客豚</div>
+        <div class="logo-desc">
+            
+            Focus on the best value information, including SideProject, IndieMaker, diy hardware, mac efficient kits and good things.
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li>
+            <a href="/" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-home"></i>
+                
+                Index
+            </a>
+        </li>
+        
+        <li>
+            <a href="/challege" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-bookmark"></i>
+                
+                Challege
+            </a>
+        </li>
+        
+        <li>
+            <a href="/about" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-user-circle-o"></i>
+                
+                About
+            </a>
+        </li>
+        
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+    </nav>
+
+</header>
+<!-- <div style="border:1px red solid; width: 1780px; margin: 5px auto">微信公众号: hackdapp</div> -->
+
+
+
+
+
+<div class="bg-cover pd-header" style="background-image: url('https://cdn.instructables.com/FI3/2N7C/J1WEQNJ3/FI32N7CJ1WEQNJ3.LARGE.jpg?auto=webp&&frame=1&width=320')">
+    <div class="container">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <div class="description center-align post-title">
+                        CIRCUIT BOARD DESIGN CLASS
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="container content">
+
+    
+    <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/Course/" target="_blank">
+                                <span class="chip bg-color">Course</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                <div class="post-date info-break-policy">
+                    <i class="fa fa-calendar-minus-o fa-fw"></i>Publish Date:&nbsp;&nbsp;
+                    2020-04-28
+                </div>
+
+                
+				
+				
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="fa fa-eye fa-fw"></i>Read Count:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+        </div>
+        <hr class="clearfix">
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <p><img src="http://cdn.hackdapp.com/2020-02-02-121551.jpg" alt></p>
+<p>In this class, you will learn how to design a custom printed circuit board from a breadboard prototype. This is useful if you want to make multiple copies of a circuit board for your project, or simply want to add a level of polish and professionalism to your work. By creating your own custom circuit boards, you are elevating your project to more refined levels of design and fabrication.</p>
+<p>While this may seem intimidating, it is actually easy to do if you take your time and do it carefully. I will show you how to digitize a circuit in the freeware version of Autodesk Eagle and then how to convert the schematic into board files which can be sent out for fabrication. Once you see for yourself how easy this process is, you will be hooked. There are few greater feelings in the wild world of electronics than holding your first custom manufactured circuit board in your hand.</p>
+<p>I hope that you will follow along with me as I teach you how to design a circuit board.</p>
+<h2 id="Lessons"><a href="#Lessons" class="headerlink" title="Lessons"></a>Lessons</h2><h3 id="Lesson-1-PCB-Concepts-and-Materials"><a href="#Lesson-1-PCB-Concepts-and-Materials" class="headerlink" title="Lesson 1: PCB Concepts and Materials"></a>Lesson 1: PCB Concepts and Materials</h3><p>We begin by learning some of the basic concepts and terminology related to circuit boards. We will review what tools and materials you will need to complete the class.</p>
+<p><a href="https://www.instructables.com/lesson/PCB-Concepts-and-Materials/" target="_blank" rel="noopener">Take Lesson</a></p>
+<h3 id="Lesson-2-Preparing-a-Schematic"><a href="#Lesson-2-Preparing-a-Schematic" class="headerlink" title="Lesson 2: Preparing a Schematic"></a>Lesson 2: Preparing a Schematic</h3><p>Before we can design the board itself, there is some prep work that needs to happen. In this lesson we will start with a breadboard and end with a digital rendering of the schematic.</p>
+<p><a href="https://www.instructables.com/lesson/Preparing-a-Schematic/" target="_blank" rel="noopener">Take Lesson</a></p>
+<h3 id="Lesson-3-Laying-Out-the-Board"><a href="#Lesson-3-Laying-Out-the-Board" class="headerlink" title="Lesson 3: Laying Out the Board"></a>Lesson 3: Laying Out the Board</h3><p>Once the schematic is done, it is just a button-click away from turning in a circuit board. Well… almost. Learn how to layout the parts and draw traces to complete your circuit board.</p>
+<p><a href="https://www.instructables.com/lesson/Laying-Out-the-Board/" target="_blank" rel="noopener">Take Lesson</a></p>
+<h3 id="Lesson-4-Manufacturing"><a href="#Lesson-4-Manufacturing" class="headerlink" title="Lesson 4: Manufacturing"></a>Lesson 4: Manufacturing</h3><p>In this lesson we cover basic validation of the design file and discuss selecting a manufacturer.</p>
+<p><a href="https://www.instructables.com/lesson/Manufacturing/" target="_blank" rel="noopener">Take Lesson</a></p>
+<h3 id="Lesson-5-Assembling-the-Board"><a href="#Lesson-5-Assembling-the-Board" class="headerlink" title="Lesson 5: Assembling the Board"></a>Lesson 5: Assembling the Board</h3><p>Finally, we assemble our board and see if it works. Hopefully all is good in the hood. However, if there are problems, we touch on some basic troubleshooting techniques.</p>
+<p><a href="https://www.instructables.com/lesson/Assembling-the-Board/" target="_blank" rel="noopener">Take Lesson</a></p>
+<p>原文链接: <a href="https://www.instructables.com/class/Circuit-Board-Design-Class/" target="_blank" rel="noopener">Free Online Circuit Board Design Class - Instructables</a></p>
+<center> — The End — </center>
+
+<h1 id="欢迎关注我的公众号"><a href="#欢迎关注我的公众号" class="headerlink" title="欢迎关注我的公众号"></a>欢迎关注我的公众号</h1><center> <img src="http://cdn.hackdapp.com/2019-04-03-mysign.jpg" alt> </center>
+
+<hr>
+<pre><code>       _                 _
+ _ __ | |_ _   _ _ __   (_) ___
+| &#39;_ \| __| | | | &#39;_ \  | |/ _ \
+| |_) | |_| |_| | | | |_| | (_) |
+| .__/ \__|\__,_|_| |_(_)_|\___/
+|_|
+</code></pre><pre><code>极客豚:   http://ptun.io
+===============================
+我的个人博客:  https://www.hackdapp.com/
+我的哔哩哔哩:  https://space.bilibili.com/17360859
+我的github:   https://github.com/hackdapp
+IndieMakers: https://www.indiemakers.cn
+我的微信公众号: hackdapp
+===============================
+联系邮箱：55269778@qq.com
+</code></pre>
+            </div>
+            <hr>
+
+            
+
+            <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+
+<div id="article-share">
+    
+    <div class="social-share" data-disabled="qzone, qq, weibo, douban"></div>
+    
+</div>
+
+<script src="/libs/share/js/social-share.min.js"></script>
+
+            
+
+
+        </div>
+    </div>
+
+    
+        <link rel="stylesheet" href="/libs/gitalk/gitalk.css">
+<link rel="stylesheet" href="/css/my-gitalk.css">
+
+<div class="card gitalk-card" data-aos="fade-up">
+    <div id="gitalk-container" class="card-content"></div>
+</div>
+
+<script src="/libs/gitalk/gitalk.min.js"></script>
+<script>
+    let gitalk = new Gitalk({
+        clientID: '580230fd6334c4654ed5',
+        clientSecret: '3f91c3b703b9a17cae5b95f9b56228c3e30e9878',
+        repo: 'ptun.io',
+        owner: 'hackdapp',
+        admin: "hackdapp",
+        id: '2020-04-28T08-20-41',
+        distractionFreeMode: false  // Facebook-like distraction free mode
+    });
+
+    gitalk.render('gitalk-container');
+</script>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6 overflow-policy" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fa fa-chevron-left"></i>&nbsp;Previous</div>
+            <div class="card">
+                <a href="/archives/watch-your-life-tick-away-with-this-lifetime-countdown-clock.html">
+                    <div class="card-image">
+                        
+                        <img src="https://hackaday.com/wp-content/uploads/2020/01/lifeclocc.jpg?w=800" class="responsive-img" alt="WATCH YOUR LIFE TICK AWAY WITH THIS LIFETIME COUNTDOWN CLOCK">
+                        
+                        <span class="card-title">WATCH YOUR LIFE TICK AWAY WITH THIS LIFETIME COUNTDOWN CLOCK</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+Good news, everyone!Now you can have an ongoing existential crisis, every second of your ever-dwindling life with this 
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="fa fa-clock-o fa-fw icon-date"></i>2020-04-28
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fa fa-user fa-fw"></i>
+                            hackhook
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/硬件/" target="_blank">
+                        <span class="chip bg-color">硬件</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6 overflow-policy" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                Next&nbsp;<i class="fa fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/archives/Paper-Plane-Engine.html">
+                    <div class="card-image">
+                        
+                        <img src="http://cdn.hackdapp.com/114933.jpg" class="responsive-img" alt="Paper Plane Engine">
+                        
+                        <span class="card-title">Paper Plane Engine</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+This paper plane “engine” is a quick and easy way to improve the travel distance and speed of nearly all models of pape
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-10-25
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fa fa-user fa-fw"></i>
+                            hackhook
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/DIY/" target="_blank">
+                        <span class="chip bg-color">DIY</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+</div>
+
+
+
+    
+
+</main>
+
+
+<footer class="page-footer bg-color">
+    <div class="container row center-align">
+        <div class="col s12 m8 l8 copy-right">
+
+            
+
+            
+			         
+                <br>
+                
+                <span id="busuanzi_container_site_pv">
+                    <i class="fa fa-heart-o"></i>
+                    本站总访问量 <span id="busuanzi_value_site_pv" class="white-color"></span>
+                </span>
+                
+                
+                <span id="busuanzi_container_site_uv">
+                    <i class="fa fa-users"></i>
+                    次,&nbsp;访客数 <span id="busuanzi_value_site_uv" class="white-color"></span> 人.
+                </span>
+                
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/hackdapp" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fa fa-github"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fa fa-rss"></i>
+    </a>
+</div>
+    </div>
+
+</footer>
+
+<div class="progress-bar"></div>
+
+<script type="text/javascript">
+  daovoice('init', {
+    app_id: "324f5ec0"
+  });
+  daovoice('update');
+</script>
+
+
+<!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fa fa-search"></i>&nbsp;&nbsp;Search</span>
+            <input type="search" id="searchInput" name="s" placeholder="Please enter a search keyword" class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script src="/js/search.js"></script>
+<script type="text/javascript">
+$(function () {
+    searchFunc("/" + "search.xml", 'searchInput', 'searchResult');
+});
+</script>
+<!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fa fa-angle-up"></i>
+    </a>
+</div>
+
+
+<script src="/libs/materialize/materialize.min.js"></script>
+<script src="/libs/masonry/masonry.pkgd.min.js"></script>
+<script src="/libs/aos/aos.js"></script>
+<script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+<script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+<script src="/js/matery.js"></script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-132319949-2"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+    gtag('config', 'UA-132319949-2');
+</script>
+
+
+
+
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+
+
+</body>
+</html>

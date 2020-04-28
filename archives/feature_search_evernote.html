@@ -1,0 +1,517 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="印象笔记之全文检索, best value SideProject IndieMaker electronic hardware mac efficient Kits good things sharing">
+    <meta name="description" content="在过去的前几年，其实自己一直都在用印象笔记存储收集的网页信息以及储自己写的一些文章资料。但有一天，突然感觉它越来越显得笨重，不太满足当下对于简洁的要求，所以就换到另外一个平台也就是现在的ulysses上。
+但就在前几天关注别人的一个关于如何">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="monetization" content="$coil.xrptipbot.com/DHaG5sfGQDq0KNSTqynxeQ">
+    <meta name="og:image" content="http://cdn.hackdapp.com/122906.jpg">
+    <meta name="twitter:image:src" content="http://cdn.hackdapp.com/122906.jpg">
+    <title>印象笔记之全文检索 | 极客豚</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+    <style type="text/css">
+        
+    </style>
+
+    <script src="/libs/jquery/jquery-2.2.0.min.js"></script>
+    <script>(function(i,s,o,g,r,a,m){i["DaoVoiceObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset="utf-8";m.parentNode.insertBefore(a,m)})(window,document,"script",('https:' == document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/324f5ec0.js","daovoice")</script>
+
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+
+
+<body>
+
+<header class="navbar-fixed">
+    <nav id="headNav" class="bg-color">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">极客豚</span>
+                </a>
+
+
+            </div>
+
+
+
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fa fa-navicon"></i></a>
+<ul class="right">
+    
+    <li class="hide-on-med-and-down">
+        <a href="/" class="waves-effect waves-light">
+            
+            <i class="fa fa-home"></i>
+            
+            <span>Index</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/challege" class="waves-effect waves-light">
+            
+            <i class="fa fa-bookmark"></i>
+            
+            <span>Challege</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/about" class="waves-effect waves-light">
+            
+            <i class="fa fa-user-circle-o"></i>
+            
+            <span>About</span>
+        </a>
+    </li>
+    
+    <!-- <li>
+        <a href="#" class="modal-trigger waves-effect waves-light">
+          <img src="http://cdn.hackdapp.com/qrcode_for_gh_16affcd16f4a_430.jpg" class="mp-chat" alt="LOGO">
+        </a>
+    </li> -->
+    <li>
+        <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+            <i id="searchIcon" class="fa fa-search" title="Search"></i>
+        </a>
+    </li>
+</ul>
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">极客豚</div>
+        <div class="logo-desc">
+            
+            Focus on the best value information, including SideProject, IndieMaker, diy hardware, mac efficient kits and good things.
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li>
+            <a href="/" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-home"></i>
+                
+                Index
+            </a>
+        </li>
+        
+        <li>
+            <a href="/challege" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-bookmark"></i>
+                
+                Challege
+            </a>
+        </li>
+        
+        <li>
+            <a href="/about" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-user-circle-o"></i>
+                
+                About
+            </a>
+        </li>
+        
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+    </nav>
+
+</header>
+<!-- <div style="border:1px red solid; width: 1780px; margin: 5px auto">微信公众号: hackdapp</div> -->
+
+
+
+
+
+<div class="bg-cover pd-header" style="background-image: url('http://cdn.hackdapp.com/122906.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <div class="description center-align post-title">
+                        印象笔记之全文检索
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="container content">
+
+    
+    <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/日增一技/" target="_blank">
+                                <span class="chip bg-color">日增一技</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                <div class="post-date info-break-policy">
+                    <i class="fa fa-calendar-minus-o fa-fw"></i>Publish Date:&nbsp;&nbsp;
+                    2019-06-19
+                </div>
+
+                
+				
+				
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="fa fa-eye fa-fw"></i>Read Count:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+        </div>
+        <hr class="clearfix">
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <p>在过去的前几年，其实自己一直都在用印象笔记存储收集的网页信息以及储自己写的一些文章资料。但有一天，突然感觉它越来越显得笨重，不太满足当下对于简洁的要求，所以就换到另外一个平台也就是现在的ulysses上。</p>
+<p>但就在前几天关注别人的一个关于如何整理知识仓库的时候，发现对方用的是印象笔记，当时还不以为然，直到把所有课程内容看完后，才发现自己其实并没有把印象笔记用好，在于自己对软件本身以及整理归档方面的知识欠缺。其中一点就是：印象笔记支持像搜索引擎一样的搜索语法；其二就是标签管理，在此之前自己的文件归档方式就是根据业务类型建不同的大类文件夹，然后在不同的大类文件夹下建二级、三极甚至四、五级文件夹。虽然都能找到资源，但在文件归档及文件检索方面却花费了大量的时间，当时从来没想过可以借用标签来达到这个目的。</p>
+<p>注：今天不讲如何使用标签对文件进行归档分类，改天抽一章节详细讲解。</p>
+<p>所以，今天重要想分享的就是：印象笔记支持类搜索引擎般的检索语法。比如前两天分享的Google搜索技巧中引号、减号、intitle等语法。</p>
+<h2 id="加号用法"><a href="#加号用法" class="headerlink" title="加号用法"></a>加号用法</h2><p><img src="http://cdn.hackdapp.com/121505.jpg" alt></p>
+<h2 id="减号用法"><a href="#减号用法" class="headerlink" title="减号用法"></a>减号用法</h2><p><img src="http://cdn.hackdapp.com/121538.jpg" alt></p>
+<h2 id="intitle用法"><a href="#intitle用法" class="headerlink" title="intitle用法"></a>intitle用法</h2><p><img src="http://cdn.hackdapp.com/121358.jpg" alt></p>
+<p>除此之外，还支持很多高级搜索语法，可继续阅读&lt;&lt;相关资料&gt;&gt;链接内容。</p>
+<h5 id="相关资料"><a href="#相关资料" class="headerlink" title="相关资料"></a>相关资料</h5><ol>
+<li><a href="https://help.yinxiang.com/hc/articles/62175?api_name=" target="_blank" rel="noopener">如何使用印象笔记高级搜索语法-正在搜索-使用印象笔记-印象笔记帮助中心</a></li>
+<li><a href="http://dev.evernote.com/doc/articles/search_grammar.php" target="_blank" rel="noopener">Evernote Search Grammar - Evernote Developers</a></li>
+<li><a href="https://help.yinxiang.com/hc/articles/63224?api_name=" target="_blank" rel="noopener">如何创建已保存的搜索-正在搜索-使用印象笔记-印象笔记帮助中心</a></li>
+<li><a href="https://help.yinxiang.com/hc/articles/63044?api_name=" target="_blank" rel="noopener">快速搜索-印象笔记入门指南-使用印象笔记-印象笔记帮助中心</a></li>
+</ol>
+<center> — The End — </center>
+
+<hr>
+<pre><code>       _                 _
+ _ __ | |_ _   _ _ __   (_) ___
+| &#39;_ \| __| | | | &#39;_ \  | |/ _ \
+| |_) | |_| |_| | | | |_| | (_) |
+| .__/ \__|\__,_|_| |_(_)_|\___/
+|_|
+</code></pre><pre><code>极客豚:   http://ptun.io
+===============================
+我的个人博客:  https://www.hackdapp.com/
+我的哔哩哔哩:  https://space.bilibili.com/17360859
+我的github:   https://github.com/hackdapp
+IndieMakers: https://www.indiemakers.cn
+我的微信公众号: hackdapp
+===============================
+联系邮箱：55269778@qq.com
+</code></pre>
+            </div>
+            <hr>
+
+            
+
+            <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+
+<div id="article-share">
+    
+    <div class="social-share" data-disabled="qzone, qq, weibo, douban"></div>
+    
+</div>
+
+<script src="/libs/share/js/social-share.min.js"></script>
+
+            
+
+
+        </div>
+    </div>
+
+    
+        <link rel="stylesheet" href="/libs/gitalk/gitalk.css">
+<link rel="stylesheet" href="/css/my-gitalk.css">
+
+<div class="card gitalk-card" data-aos="fade-up">
+    <div id="gitalk-container" class="card-content"></div>
+</div>
+
+<script src="/libs/gitalk/gitalk.min.js"></script>
+<script>
+    let gitalk = new Gitalk({
+        clientID: '580230fd6334c4654ed5',
+        clientSecret: '3f91c3b703b9a17cae5b95f9b56228c3e30e9878',
+        repo: 'ptun.io',
+        owner: 'hackdapp',
+        admin: "hackdapp",
+        id: '2019-06-19T19-51-56',
+        distractionFreeMode: false  // Facebook-like distraction free mode
+    });
+
+    gitalk.render('gitalk-container');
+</script>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6 overflow-policy" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fa fa-chevron-left"></i>&nbsp;Previous</div>
+            <div class="card">
+                <a href="/archives/learn_bloom.html">
+                    <div class="card-image">
+                        
+                        <img src="http://cdn.hackdapp.com/115946.jpg" class="responsive-img" alt="布鲁姆学习分类法">
+                        
+                        <span class="card-title">布鲁姆学习分类法</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            在上学的时候，我们所使用的一些教材如果你还有印象的化，应该能记得对于一些知识点是要求我们达到了解、熟悉、掌握等不同层级的，来考量学生是否真正掌握教材中的知识点内容。而本文分享的布鲁姆学习分类法，也是指对于学习的多级学习分类，另一方面也反映了
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-06-20
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fa fa-user fa-fw"></i>
+                            hackhook
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/认知/" target="_blank">
+                        <span class="chip bg-color">认知</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6 overflow-policy" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                Next&nbsp;<i class="fa fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/archives/get_things_done.html">
+                    <div class="card-image">
+                        
+                        <img src="http://cdn.hackdapp.com/115223.jpg" class="responsive-img" alt="万年老牌GTD-Things">
+                        
+                        <span class="card-title">万年老牌GTD-Things</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            在每天的生活、工作、学习中，有很多各种各样的事情需要我们去处理。你也知道，有时候我们的记忆力总显得不怎么牢靠，因为每天可能都会忘记一些准备去做的事情。小事情还好，如果碰到大的事情没有去做，那么带来的影响很可能就会是一些特别大的经济损失。
+当
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-06-18
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fa fa-user fa-fw"></i>
+                            hackhook
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/效率工具/" target="_blank">
+                        <span class="chip bg-color">效率工具</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+</div>
+
+
+
+    
+
+</main>
+
+
+<footer class="page-footer bg-color">
+    <div class="container row center-align">
+        <div class="col s12 m8 l8 copy-right">
+
+            
+
+            
+			         
+                <br>
+                
+                <span id="busuanzi_container_site_pv">
+                    <i class="fa fa-heart-o"></i>
+                    本站总访问量 <span id="busuanzi_value_site_pv" class="white-color"></span>
+                </span>
+                
+                
+                <span id="busuanzi_container_site_uv">
+                    <i class="fa fa-users"></i>
+                    次,&nbsp;访客数 <span id="busuanzi_value_site_uv" class="white-color"></span> 人.
+                </span>
+                
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/hackdapp" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fa fa-github"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fa fa-rss"></i>
+    </a>
+</div>
+    </div>
+
+</footer>
+
+<div class="progress-bar"></div>
+
+<script type="text/javascript">
+  daovoice('init', {
+    app_id: "324f5ec0"
+  });
+  daovoice('update');
+</script>
+
+
+<!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fa fa-search"></i>&nbsp;&nbsp;Search</span>
+            <input type="search" id="searchInput" name="s" placeholder="Please enter a search keyword" class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script src="/js/search.js"></script>
+<script type="text/javascript">
+$(function () {
+    searchFunc("/" + "search.xml", 'searchInput', 'searchResult');
+});
+</script>
+<!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fa fa-angle-up"></i>
+    </a>
+</div>
+
+
+<script src="/libs/materialize/materialize.min.js"></script>
+<script src="/libs/masonry/masonry.pkgd.min.js"></script>
+<script src="/libs/aos/aos.js"></script>
+<script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+<script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+<script src="/js/matery.js"></script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-132319949-2"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+    gtag('config', 'UA-132319949-2');
+</script>
+
+
+
+
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+
+
+</body>
+</html>

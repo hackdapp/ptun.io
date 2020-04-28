@@ -1,0 +1,22 @@
+/* Here is your custom css styles. */
+.bg-color {
+    background-image: linear-gradient(to right, #A90000 0%, #A90000 100%);
+}
+
+@font-face {
+  font-family: 'XXT'
+  src:url('//cdn.hackdapp.com/WenYue-XinQingNianTi-NC-W8-1.otf');
+  font-weight: normal;
+  font-style: normal;
+  font-size: 4rem;
+}
+
+.logo-span {
+  font-family: XXT;
+}
+
+.card .card-title{
+  font-family: XXT;
+  font-size: 24px;
+  font-weight: 300;
+}

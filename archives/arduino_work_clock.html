@@ -1,0 +1,560 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="Arduino Word Clock, best value SideProject IndieMaker electronic hardware mac efficient Kits good things sharing">
+    <meta name="description" content="Further details on this build on my site here Word Clock
+Arduino Word Clock with minute resolution of time in words and ">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="monetization" content="$coil.xrptipbot.com/DHaG5sfGQDq0KNSTqynxeQ">
+    <meta name="og:image" content="http://www.brettoliver.org.uk/Word_Clock/images/WordClock_Full_Animation.gif">
+    <meta name="twitter:image:src" content="http://www.brettoliver.org.uk/Word_Clock/images/WordClock_Full_Animation.gif">
+    <title>Arduino Word Clock | 极客豚</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+    <style type="text/css">
+        
+    </style>
+
+    <script src="/libs/jquery/jquery-2.2.0.min.js"></script>
+    <script>(function(i,s,o,g,r,a,m){i["DaoVoiceObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset="utf-8";m.parentNode.insertBefore(a,m)})(window,document,"script",('https:' == document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/324f5ec0.js","daovoice")</script>
+
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+
+
+<body>
+
+<header class="navbar-fixed">
+    <nav id="headNav" class="bg-color">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">极客豚</span>
+                </a>
+
+
+            </div>
+
+
+
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fa fa-navicon"></i></a>
+<ul class="right">
+    
+    <li class="hide-on-med-and-down">
+        <a href="/" class="waves-effect waves-light">
+            
+            <i class="fa fa-home"></i>
+            
+            <span>Index</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/challege" class="waves-effect waves-light">
+            
+            <i class="fa fa-bookmark"></i>
+            
+            <span>Challege</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/about" class="waves-effect waves-light">
+            
+            <i class="fa fa-user-circle-o"></i>
+            
+            <span>About</span>
+        </a>
+    </li>
+    
+    <!-- <li>
+        <a href="#" class="modal-trigger waves-effect waves-light">
+          <img src="http://cdn.hackdapp.com/qrcode_for_gh_16affcd16f4a_430.jpg" class="mp-chat" alt="LOGO">
+        </a>
+    </li> -->
+    <li>
+        <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+            <i id="searchIcon" class="fa fa-search" title="Search"></i>
+        </a>
+    </li>
+</ul>
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">极客豚</div>
+        <div class="logo-desc">
+            
+            Focus on the best value information, including SideProject, IndieMaker, diy hardware, mac efficient kits and good things.
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li>
+            <a href="/" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-home"></i>
+                
+                Index
+            </a>
+        </li>
+        
+        <li>
+            <a href="/challege" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-bookmark"></i>
+                
+                Challege
+            </a>
+        </li>
+        
+        <li>
+            <a href="/about" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-user-circle-o"></i>
+                
+                About
+            </a>
+        </li>
+        
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+    </nav>
+
+</header>
+<!-- <div style="border:1px red solid; width: 1780px; margin: 5px auto">微信公众号: hackdapp</div> -->
+
+
+
+
+
+<div class="bg-cover pd-header" style="background-image: url('http://www.brettoliver.org.uk/Word_Clock/images/WordClock_Full_Animation.gif')">
+    <div class="container">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <div class="description center-align post-title">
+                        Arduino Word Clock
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="container content">
+
+    
+    <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/硬件/" target="_blank">
+                                <span class="chip bg-color">硬件</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                <div class="post-date info-break-policy">
+                    <i class="fa fa-calendar-minus-o fa-fw"></i>Publish Date:&nbsp;&nbsp;
+                    2019-09-23
+                </div>
+
+                
+				
+				
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="fa fa-eye fa-fw"></i>Read Count:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+        </div>
+        <hr class="clearfix">
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <p><img src="http://www.brettoliver.org.uk/Word_Clock/images/WordClock_Full_Animation.gif" alt><br>Further details on this build on my site here Word Clock</p>
+<p>Arduino Word Clock with minute resolution of time in words and linear display of seconds.</p>
+<p>NEW added Doppler Radar option. V4.5 the clock now checks for movement on the quarter hour and will turn off the display if no movement detected. Code v4.5 works for both PIR and Doppler Radar modules.</p>
+<p>There are also modes for digital clock, analogue clock, temperature &amp; humidity, &amp; also three games, Game of Life, Simon &amp; Tetris.</p>
+<p>The clock can be stand alone or run as a slave off a Master Clock if required.</p>
+<p>Without a Master clock time is controlled by the Word Clock’s built in temperature compensated real time clock.</p>
+<p>There is an option for PIR or Doppler Radar control so the clock automatically turns off when no one is in the room.</p>
+<p>The Clock measures 500mm x 500mm (19.68” x19.68”) weighs 12lb (5.5Kg) and is designed to be wall mounted. There are touch pads in each corner to setup and control the clock.</p>
+<p>Edit 02/12/2018 Do not use automatic summer winter correction as there is a bug that causes the RTC to loose the time on power loss. Leave R5 connected to PIN D7 via 0v.</p>
+<p>Edit 13/12/17 Corrected fault on touch sensors on Tetris game now v3.8</p>
+<p>Credits<br>This clock is based on the original Word Clock by Wouter Devinck full details on his Instructable &amp; GitHub and the “Catalan” Pijuana Word Clock software based on Wouter Devinck’s clock (this is a fork off the original Wouter Devinck design) here GitHub.</p>
+<p><img src="http://www.brettoliver.org.uk/Word_Clock/images/Word_clock_side_animation.gif" alt></p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/nqQW0eoTaXs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<p><img src="http://www.brettoliver.org.uk/Word_Clock/images/word_clock_brett_oliver.jpg" alt></p>
+<p>Word Clocks tell the time using a matrix of words or numbers and letters and have been around for many years.</p>
+<p>There are a few different design types around that effect the complexity of the clock build.</p>
+<p>The simplest use blocks of words to tell the time in five minute resolution eg O’CLOCK, 5 PAST, 10 PAST etc.</p>
+<p>These clocks only use 23 individual LED blocks and therefore are the simplest to construct.</p>
+<p>The main disadvantage of these clocks is they can only show the time in this set format.</p>
+<p><img src="http://www.brettoliver.org.uk/Word_Clock/images/word_clock_commercial.jpg" alt></p>
+<p>The medium level clock has a 11x10 matrix of LEDs plus four addition LEDs around the outside of the clock.</p>
+<p>The Raspberry Pi controlled clock below even has multicolour LEDs and as it has 110 individual LEDs it can display digits and basic images.</p>
+<p>These clock still use a 5 min resolution in words but often add “just gone 5 past” or almost 10 to” to increase the resolution slightly.</p>
+<p>Often the four LEDs around the corners of the frame indicate the passing four minutes to fill the gap between the 5 minute worded resolution.</p>
+<p>These clocks are reasonable complex to build and often use strips of LEDs to make the build easier.</p>
+<p>There are commercial versions of this type of clock available.</p>
+<p>The 450mm wall hanging version cost around £1000 and features interchangeable front panels in many colours and materials as well as smaller desktop and watches are available.</p>
+<p>below the 450mm x 450mm QLOCKTWO commercial word clock</p>
+<h2 id="……"><a href="#……" class="headerlink" title="……"></a>……</h2><p>#Links</p>
+<ul>
+<li><a href="https://hackaday.com/2019/09/21/can-you-read-me-the-time/" target="_blank" rel="noopener">Can You Read Me The Time? | Hackaday</a></li>
+<li><a href="https://hackaday.com/2019/02/15/is-that-a-word-clock-in-your-pocket/" target="_blank" rel="noopener">Is That A Word Clock In Your Pocket? | Hackaday</a></li>
+<li><a href="https://hackaday.io/project/164406-small-word-clock#menu-description" target="_blank" rel="noopener">小字时钟| Hackaday.io</a></li>
+<li><a href="https://www.drdflo.com/wordclock" target="_blank" rel="noopener">LED Word Clock — Dr. D-Flo</a></li>
+<li><a href="https://learn.adafruit.com/neomatrix-8x8-word-clock/overview" target="_blank" rel="noopener">Overview | NeoMatrix 8x8 Word Clock | Adafruit Learning System</a></li>
+<li><a href="https://andydoro.com/wordclockdesktop/" target="_blank" rel="noopener">andy doro</a></li>
+<li><a href="https://github.com/andydoro/WordClock-NeoMatrix8x8" target="_blank" rel="noopener">andydoro/WordClock-NeoMatrix8x8: Wordclock using NeoMatrix 8x8</a></li>
+<li><a href="http://www.espruino.com/Tiny+Word+Clock" target="_blank" rel="noopener">Tiny Word Clock - Espruino</a></li>
+<li><a href="http://www.espruino.com/LED+Matrix#wiring" target="_blank" rel="noopener">LED Matrices - Espruino</a></li>
+</ul>
+<hr>
+<p><a href="https://store.qlocktwo.com/us/" target="_blank" rel="noopener">Home Page USA STORE</a></p>
+<p>原文链接: <a href="https://www.instructables.com/id/Arduino-Word-Clock/" target="_blank" rel="noopener">Arduino Word Clock: 31 Steps (with Pictures)</a></p>
+<center> — The End — </center>
+
+<h1 id="欢迎关注我的公众号"><a href="#欢迎关注我的公众号" class="headerlink" title="欢迎关注我的公众号"></a>欢迎关注我的公众号</h1><center> <img src="http://cdn.hackdapp.com/2019-04-03-mysign.jpg" alt> </center>
+
+<hr>
+<pre><code>       _                 _
+ _ __ | |_ _   _ _ __   (_) ___
+| &#39;_ \| __| | | | &#39;_ \  | |/ _ \
+| |_) | |_| |_| | | | |_| | (_) |
+| .__/ \__|\__,_|_| |_(_)_|\___/
+|_|
+</code></pre><pre><code>极客豚:   http://ptun.io
+===============================
+我的个人博客:  https://www.hackdapp.com/
+我的哔哩哔哩:  https://space.bilibili.com/17360859
+我的github:   https://github.com/hackdapp
+IndieMakers: https://www.indiemakers.cn
+我的微信公众号: hackdapp
+===============================
+联系邮箱：55269778@qq.com
+</code></pre>
+            </div>
+            <hr>
+
+            
+
+            <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+
+<div id="article-share">
+    
+    <div class="social-share" data-disabled="qzone, qq, weibo, douban"></div>
+    
+</div>
+
+<script src="/libs/share/js/social-share.min.js"></script>
+
+            
+
+
+        </div>
+    </div>
+
+    
+        <link rel="stylesheet" href="/libs/gitalk/gitalk.css">
+<link rel="stylesheet" href="/css/my-gitalk.css">
+
+<div class="card gitalk-card" data-aos="fade-up">
+    <div id="gitalk-container" class="card-content"></div>
+</div>
+
+<script src="/libs/gitalk/gitalk.min.js"></script>
+<script>
+    let gitalk = new Gitalk({
+        clientID: '580230fd6334c4654ed5',
+        clientSecret: '3f91c3b703b9a17cae5b95f9b56228c3e30e9878',
+        repo: 'ptun.io',
+        owner: 'hackdapp',
+        admin: "hackdapp",
+        id: '2019-09-23T20-39-12',
+        distractionFreeMode: false  // Facebook-like distraction free mode
+    });
+
+    gitalk.render('gitalk-container');
+</script>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6 overflow-policy" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fa fa-chevron-left"></i>&nbsp;Previous</div>
+            <div class="card">
+                <a href="/archives/Raspberry-Pi-Minikame.html">
+                    <div class="card-image">
+                        
+                        <img src="https://cdn.instructables.com/FW4/Z51K/JSYZD16Y/FW4Z51KJSYZD16Y.LARGE.jpg?auto=webp&amp;frame=1&amp;width=900&amp;height=1024&amp;fit=bounds" class="responsive-img" alt="Raspberry Pi - Minikame">
+                        
+                        <span class="card-title">Raspberry Pi - Minikame</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+
+
+A simple Quadruped controlled by your phone(IOS and Android). Runs on Raspberry Pi and Android.
+Required Components:
+
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-09-24
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fa fa-user fa-fw"></i>
+                            hackhook
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/硬件/" target="_blank">
+                        <span class="chip bg-color">硬件</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6 overflow-policy" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                Next&nbsp;<i class="fa fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/archives/brydge.html">
+                    <div class="card-image">
+                        
+                        <img src="http://cdn.hackdapp.com/122717.jpg" class="responsive-img" alt="Brydge - Award Winning Bluetooth Keyboards for iPad & Surface Pro">
+                        
+                        <span class="card-title">Brydge - Award Winning Bluetooth Keyboards for iPad & Surface Pro</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+评价: 专门针对iPadPro设计的配置蓝牙键盘Case。个人认为这绝对是2019年最值得购买的一个物件， 不论是从颜值还是体验。
+
+
+
+喜欢，就买喽！~
+
+官网链接: Brydge - Award Winning Bluetooth K
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-09-20
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fa fa-user fa-fw"></i>
+                            hackhook
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/好物推荐/" target="_blank">
+                        <span class="chip bg-color">好物推荐</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+</div>
+
+
+
+    
+
+</main>
+
+
+<footer class="page-footer bg-color">
+    <div class="container row center-align">
+        <div class="col s12 m8 l8 copy-right">
+
+            
+
+            
+			         
+                <br>
+                
+                <span id="busuanzi_container_site_pv">
+                    <i class="fa fa-heart-o"></i>
+                    本站总访问量 <span id="busuanzi_value_site_pv" class="white-color"></span>
+                </span>
+                
+                
+                <span id="busuanzi_container_site_uv">
+                    <i class="fa fa-users"></i>
+                    次,&nbsp;访客数 <span id="busuanzi_value_site_uv" class="white-color"></span> 人.
+                </span>
+                
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/hackdapp" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fa fa-github"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fa fa-rss"></i>
+    </a>
+</div>
+    </div>
+
+</footer>
+
+<div class="progress-bar"></div>
+
+<script type="text/javascript">
+  daovoice('init', {
+    app_id: "324f5ec0"
+  });
+  daovoice('update');
+</script>
+
+
+<!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fa fa-search"></i>&nbsp;&nbsp;Search</span>
+            <input type="search" id="searchInput" name="s" placeholder="Please enter a search keyword" class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script src="/js/search.js"></script>
+<script type="text/javascript">
+$(function () {
+    searchFunc("/" + "search.xml", 'searchInput', 'searchResult');
+});
+</script>
+<!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fa fa-angle-up"></i>
+    </a>
+</div>
+
+
+<script src="/libs/materialize/materialize.min.js"></script>
+<script src="/libs/masonry/masonry.pkgd.min.js"></script>
+<script src="/libs/aos/aos.js"></script>
+<script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+<script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+<script src="/js/matery.js"></script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-132319949-2"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+    gtag('config', 'UA-132319949-2');
+</script>
+
+
+
+
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+
+
+</body>
+</html>
